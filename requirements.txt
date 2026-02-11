@@ -1,0 +1,22 @@
+# core
+python-dotenv
+pillow
+pandas
+tqdm
+rapidfuzz
+tesseract
+
+# google imagen / gemini
+google-genai
+
+# ocr
+pytesseract
+opencv-python
+
+# vlm judge (later, but install now)
+# torch
+# transformers
+# accelerate
+
+# human ui
+streamlit

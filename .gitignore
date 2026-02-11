@@ -1,0 +1,57 @@
+# ===== OS junk =====
+.DS_Store
+Thumbs.db
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.dist/
+.build/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtualenvs
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ===== Secrets =====
+.env
+.env.*
+*.key
+*.pem
+
+# ===== Editor / IDE =====
+.vscode/
+.idea/
+*.swp
+
+# ===== Large generated artifacts (DON'T COMMIT) =====
+# Model outputs (images + logs)
+runs/
+# Results (CSV/plots) - keep your scripts, not the outputs
+results/
+
+# If you want to keep aggregated CSVs/plots in git later,
+# comment out "results/" above and instead ignore only heavy stuff:
+# results/plots/
+# results/galleries/
+# results/**/*.png
+# results/**/*.jpg
+# results/**/*.webp
+
+# ===== Local caches / downloads =====
+.cache/
+downloads/
+tmp/
+temp/
