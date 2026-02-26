@@ -428,7 +428,7 @@ with col_l:
     st.subheader(left_label)
     left_path = find_image(run_dir, left_model, pid, sample_k)
     if left_path:
-        st.image(str(left_path), use_container_width=True)
+        st.image(str(left_path), use_column_width=True)
         sl = score_label(faith_df, left_model, pid, sample_k)
         ql = quality_label(quality_df, left_model, pid, sample_k)
         if sl:
