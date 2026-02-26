@@ -347,8 +347,12 @@ with st.sidebar:
 
     st.divider()
 
-    # Progress — don't load any votes until the user has entered their name
+    # Progress — don't load any votes until the user has entered their name.
+    # Filter to the current annotator so all derived stats (progress, chart,
+    # "already voted" banner) reflect only their votes.
     rankings = load_rankings() if annotator else pd.DataFrame(columns=RANKINGS_FIELDS)
+    if annotator and not rankings.empty and "annotator" in rankings.columns:
+        rankings = rankings[rankings["annotator"] == annotator].copy()
     ranked_in_filter = sum(
         1 for pid in filtered_ids if done_key(rankings, pid, sample_k, annotator)
     )
