@@ -158,8 +158,11 @@ def load_rankings() -> pd.DataFrame:
         all_values = sheet.get_all_values()
         if len(all_values) <= 1:  # empty or header only
             return pd.DataFrame(columns=RANKINGS_FIELDS)
-        headers = all_values[0]
-        return pd.DataFrame(all_values[1:], columns=headers)
+        headers = [h.strip() for h in all_values[0]]  # strip whitespace from column names
+        df = pd.DataFrame(all_values[1:], columns=headers)
+        if "annotator" in df.columns:
+            df["annotator"] = df["annotator"].str.strip()
+        return df
     # Local fallback
     if not RANKINGS_CSV.exists():
         return pd.DataFrame(columns=RANKINGS_FIELDS)
@@ -352,7 +355,7 @@ with st.sidebar:
     # "already voted" banner) reflect only their votes.
     rankings = load_rankings() if annotator else pd.DataFrame(columns=RANKINGS_FIELDS)
     if annotator and not rankings.empty and "annotator" in rankings.columns:
-        rankings = rankings[rankings["annotator"] == annotator].copy()
+        rankings = rankings[rankings["annotator"].str.strip() == annotator.strip()].copy()
     ranked_in_filter = sum(
         1 for pid in filtered_ids if done_key(rankings, pid, sample_k, annotator)
     )
