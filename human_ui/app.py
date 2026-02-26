@@ -592,4 +592,4 @@ if any(p.exists() for _, p in PLOT_FILES):
     for i, (title, path) in enumerate(PLOT_FILES):
         with (col1 if i % 2 == 0 else col2):
             if path.exists():
-                st.image(str(path), caption=title, use_container_width=True)
+                st.image(str(path), caption=title, use_column_width=True)
