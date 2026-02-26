@@ -287,7 +287,12 @@ def plot_summary(h: pd.DataFrame, f: pd.DataFrame) -> plt.Figure:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--annotator", default="", help="Filter human rankings to this annotator only")
+    parser.add_argument("--plots-dir", default="", help="Override output directory for plots")
     args = parser.parse_args()
+
+    global PLOTS_DIR
+    if args.plots_dir:
+        PLOTS_DIR = Path(args.plots_dir)
 
     for p in (RANKINGS_CSV, FAITH_CSV, QUALITY_CSV):
         if not p.exists():

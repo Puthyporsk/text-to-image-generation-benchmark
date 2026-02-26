@@ -569,7 +569,7 @@ if not rankings.empty:
 # Results charts
 # ---------------------------------------------------------------------------
 
-PLOTS_DIR = Path("results/plots")
+PLOTS_DIR = Path("results/plots") / annotator
 PLOT_FILES = [
     ("Human Preferences (Overall)",  PLOTS_DIR / "human_overall.png"),
     ("Win Rate by Category",          PLOTS_DIR / "human_by_category.png"),
@@ -593,8 +593,9 @@ if st.button("Generate results charts"):
 
     with st.spinner("Running analysis..."):
         annotator_args = ["--annotator", annotator] if annotator else []
+        plots_dir_args = ["--plots-dir", str(PLOTS_DIR)]
         subprocess.run([sys.executable, "-m", "eval.analyze_results"] + annotator_args, check=True)
-        subprocess.run([sys.executable, "-m", "eval.plot_results"]    + annotator_args, check=True)
+        subprocess.run([sys.executable, "-m", "eval.plot_results"]    + annotator_args + plots_dir_args, check=True)
     st.success("Charts ready!")
 
 if any(p.exists() for _, p in PLOT_FILES):
