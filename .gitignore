@@ -40,19 +40,14 @@ openai-api-key.txt
 # ===== Large generated artifacts (DON'T COMMIT) =====
 # Model outputs (images + logs)
 runs/
-# Results (CSV/plots) - keep your scripts, not the outputs
-results/
-
-# If you want to keep aggregated CSVs/plots in git later,
-# comment out "results/" above and instead ignore only heavy stuff:
-# results/plots/
-# results/galleries/
-# results/**/*.png
-# results/**/*.jpg
-# results/**/*.webp
+# Human rankings go to Google Sheets; plots are ephemeral (regenerated on demand)
+results/human_rankings.csv
+results/plots/
 
 # ===== Local caches / downloads =====
 .cache/
 downloads/
 tmp/
 temp/
+cmpt722-llms-image-benchmark-af3c18068f7c.json
+/scripts/upload_to_cloudinary.py

@@ -25,3 +25,7 @@ qwen-vl-utils
 
 # human ui
 streamlit
+gspread
+cloudinary
+matplotlib
+seaborn

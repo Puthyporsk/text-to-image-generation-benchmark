@@ -1,0 +1,53 @@
+============================================================
+HUMAN RANKINGS SUMMARY
+============================================================
+Total votes  : 120
+  Gemini wins: 26  (21.7%)
+  ChatGPT wins:23  (19.2%)
+  Tie          64  (53.3%)
+  Both fail:   7  (5.8%)
+Decisive (excl. tie/neither): 49
+  Gemini:  26/49 = 53.1%
+  ChatGPT: 23/49 = 46.9%
+
+By category:
+  binding     : G=4 C=4 Tie=22 Neither=0  -> decisive: Gemini 50% vs ChatGPT 50%
+  count       : G=2 C=4 Tie=19 Neither=5  -> decisive: Gemini 33% vs ChatGPT 67%
+  spatial     : G=1 C=8 Tie=19 Neither=2  -> decisive: Gemini 11% vs ChatGPT 89%
+  typography  : G=19 C=7 Tie=4 Neither=0  -> decisive: Gemini 73% vs ChatGPT 27%
+
+============================================================
+VLM FAITHFULNESS SCORES
+============================================================
+  chatgpt   : 95.0%  (+/-13.8%,  n=120)
+  gemini    : 96.0%  (+/-12.7%,  n=120)
+
+By category:
+  binding     : Gemini 94.0% | ChatGPT 90.0% | delta +4.0%
+  count       : Gemini 100.0% | ChatGPT 100.0% | delta +0.0%
+  spatial     : Gemini 100.0% | ChatGPT 100.0% | delta +0.0%
+  typography  : Gemini 90.0% | ChatGPT 90.0% | delta +0.0%
+
+============================================================
+VLM QUALITY SCORES
+============================================================
+  chatgpt   : 99.5%  (+/-3.1%,  n=120)
+  gemini    : 98.7%  (+/-5.0%,  n=120)
+
+By category:
+  binding     : Gemini 99.3% | ChatGPT 100.0% | delta -0.7%
+  count       : Gemini 96.7% | ChatGPT 99.3% | delta -2.6%
+  spatial     : Gemini 98.7% | ChatGPT 98.7% | delta +0.0%
+  typography  : Gemini 100.0% | ChatGPT 100.0% | delta +0.0%
+
+============================================================
+HUMAN vs VLM AGREEMENT  (decisive votes only)
+============================================================
+  Faithfulness agreement: 0.0%  (0/49)
+  Quality agreement:      6.1%  (3/49)
+
+By category:
+  binding     : faith 0%  |  quality 0%  (n=8)
+  count       : faith 0%  |  quality 33%  (n=6)
+  spatial     : faith 0%  |  quality 11%  (n=9)
+  typography  : faith 0%  |  quality 0%  (n=26)

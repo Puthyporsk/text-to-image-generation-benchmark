@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import csv
 import json
+import os
 import random
 from datetime import datetime
 from pathlib import Path
@@ -29,6 +30,9 @@ from typing import Any, Dict, List, Optional
 import pandas as pd
 from PIL import Image
 import streamlit as st
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Paths  (all relative to project root; run from there)
@@ -38,6 +42,19 @@ PROMPTS_FILE = Path("prompts/core40.jsonl")
 RANKINGS_CSV = Path("results/human_rankings.csv")
 FAITH_CSV = Path("results/faithfulness_scores.csv")
 QUALITY_CSV = Path("results/quality_scores.csv")
+
+# ---------------------------------------------------------------------------
+# Deployment config  (set in .env or environment; falls back to local files)
+# ---------------------------------------------------------------------------
+
+GOOGLE_SHEET_ID  = os.environ.get("GOOGLE_SHEET_ID", "")
+GOOGLE_SA_JSON   = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON", "")
+GCS_BUCKET            = os.environ.get("GCS_BUCKET", "")
+CLOUDINARY_CLOUD_NAME = os.environ.get("CLOUDINARY_CLOUD_NAME", "")
+
+USE_SHEETS     = bool(GOOGLE_SHEET_ID and GOOGLE_SA_JSON)
+USE_GCS        = bool(GCS_BUCKET)
+USE_CLOUDINARY = bool(CLOUDINARY_CLOUD_NAME)
 
 PROVIDERS = ("gemini", "chatgpt")
 PROVIDER_LABELS = {"gemini": "Gemini (Imagen)", "chatgpt": "ChatGPT (GPT Image 1 Mini)"}
@@ -51,6 +68,37 @@ RANKINGS_FIELDS = [
     "notes",
     "annotator",
 ]
+
+# ---------------------------------------------------------------------------
+# Google Sheets client  (only initialised when USE_SHEETS is True)
+# ---------------------------------------------------------------------------
+
+def get_sheet():
+    """Return the gspread worksheet, cached in Streamlit session state."""
+    if not USE_SHEETS:
+        return None
+    if "gspread_sheet" not in st.session_state:
+        import gspread
+        from google.oauth2.service_account import Credentials
+        scopes = [
+            "https://spreadsheets.google.com/feeds",
+            "https://www.googleapis.com/auth/drive",
+        ]
+        # Streamlit Cloud: credentials stored in st.secrets
+        try:
+            if "gcp_service_account" in st.secrets:
+                creds = Credentials.from_service_account_info(
+                    dict(st.secrets["gcp_service_account"]), scopes=scopes
+                )
+            else:
+                raise KeyError
+        except Exception:
+            # Local dev: load from JSON file path in .env
+            creds = Credentials.from_service_account_file(GOOGLE_SA_JSON, scopes=scopes)
+        client = gspread.authorize(creds)
+        st.session_state["gspread_sheet"] = client.open_by_key(GOOGLE_SHEET_ID).sheet1
+    return st.session_state["gspread_sheet"]
+
 
 # ---------------------------------------------------------------------------
 # Caching
@@ -91,6 +139,14 @@ def load_quality_df() -> Optional[pd.DataFrame]:
 
 
 def load_rankings() -> pd.DataFrame:
+    if USE_SHEETS:
+        sheet = get_sheet()
+        all_values = sheet.get_all_values()
+        if len(all_values) <= 1:  # empty or header only
+            return pd.DataFrame(columns=RANKINGS_FIELDS)
+        headers = all_values[0]
+        return pd.DataFrame(all_values[1:], columns=headers)
+    # Local fallback
     if not RANKINGS_CSV.exists():
         return pd.DataFrame(columns=RANKINGS_FIELDS)
     return pd.read_csv(RANKINGS_CSV)
@@ -108,7 +164,6 @@ def save_vote(
     notes: str,
     annotator: str,
 ) -> None:
-    RANKINGS_CSV.parent.mkdir(parents=True, exist_ok=True)
     new_row = {
         "timestamp": datetime.now().isoformat(timespec="seconds"),
         "run_dir": run_dir,
@@ -122,6 +177,34 @@ def save_vote(
         "notes": notes,
         "annotator": annotator,
     }
+    row_values = [new_row[f] for f in RANKINGS_FIELDS]
+
+    if USE_SHEETS:
+        sheet = get_sheet()
+        all_values = sheet.get_all_values()
+        # Ensure header row exists
+        if not all_values:
+            sheet.append_row(RANKINGS_FIELDS)
+            all_values = [RANKINGS_FIELDS]
+        headers = all_values[0]
+        try:
+            pid_col    = headers.index("prompt_id")
+            sample_col = headers.index("sample")
+        except ValueError:
+            sheet.append_row(row_values)
+            return
+        # Upsert: update existing row if found
+        for i, row in enumerate(all_values[1:], start=2):
+            if len(row) > max(pid_col, sample_col):
+                if row[pid_col] == str(prompt_id) and row[sample_col] == str(sample):
+                    col_end = chr(ord("A") + len(RANKINGS_FIELDS) - 1)
+                    sheet.update(f"A{i}:{col_end}{i}", [row_values])
+                    return
+        sheet.append_row(row_values)
+        return
+
+    # Local CSV fallback
+    RANKINGS_CSV.parent.mkdir(parents=True, exist_ok=True)
     if RANKINGS_CSV.exists():
         df = pd.read_csv(RANKINGS_CSV)
         mask = (df["prompt_id"] == prompt_id) & (df["sample"].astype(str) == str(sample))
@@ -147,9 +230,22 @@ def done_key(rankings: pd.DataFrame, pid: str, sample: int) -> bool:
 # ---------------------------------------------------------------------------
 
 
-def find_image(run_dir: str, provider: str, prompt_id: str, sample: int) -> Optional[Path]:
-    p = Path(run_dir) / "images" / provider / f"{prompt_id}__s{sample}.png"
-    return p if p.exists() else None
+def find_image(run_dir: str, provider: str, prompt_id: str, sample: int) -> Optional[str]:
+    filename = f"{prompt_id}__s{sample}"
+    if USE_CLOUDINARY:
+        public_id = f"{run_dir}/images/{provider}/{filename}"
+        return (
+            f"https://res.cloudinary.com/{CLOUDINARY_CLOUD_NAME}"
+            f"/image/upload/{public_id}.png"
+        )
+    if USE_GCS:
+        return (
+            f"https://storage.googleapis.com/{GCS_BUCKET}"
+            f"/{run_dir}/images/{provider}/{filename}.png"
+        )
+    # Local fallback
+    p = Path(run_dir) / "images" / provider / f"{filename}.png"
+    return str(p) if p.exists() else None
 
 
 def score_label(df: Optional[pd.DataFrame], provider: str, pid: str, sample: int) -> str:
@@ -264,6 +360,10 @@ with st.sidebar:
 if "current_pid" not in st.session_state or st.session_state["current_pid"] not in filtered_ids:
     st.session_state["current_pid"] = filtered_ids[0] if filtered_ids else None
 
+# Track votes made this session so auto-advance doesn't depend on Sheets read latency
+if "local_voted" not in st.session_state:
+    st.session_state["local_voted"] = set()  # set of (prompt_id, sample)
+
 # Blind-mode assignment persists per (pid, sample) so the order doesn't flip
 # between reruns while the user is looking at the same pair.
 blind_key = f"blind_{st.session_state['current_pid']}_{sample_k}"
@@ -375,14 +475,16 @@ def cast_vote(winner_model: str) -> None:
         notes=notes,
         annotator=annotator,
     )
-    # Refresh rankings cache and advance
+    # Mark as voted locally (avoids depending on Sheets read latency for auto-advance)
+    st.session_state["local_voted"].add((pid, sample_k))
     load_faith_df.clear()
     load_quality_df.clear()
     # Auto-advance to next unranked
     fresh_rankings = load_rankings()
     next_unranked = [
         p for p in filtered_ids
-        if not done_key(fresh_rankings, p, sample_k)
+        if (p, sample_k) not in st.session_state["local_voted"]
+        and not done_key(fresh_rankings, p, sample_k)
     ]
     if next_unranked:
         st.session_state["current_pid"] = next_unranked[0]
@@ -438,3 +540,42 @@ if not rankings.empty:
             use_container_width=True,
             hide_index=True,
         )
+
+# ---------------------------------------------------------------------------
+# Results charts
+# ---------------------------------------------------------------------------
+
+PLOTS_DIR = Path("results/plots")
+PLOT_FILES = [
+    ("Human Preferences (Overall)",  PLOTS_DIR / "human_overall.png"),
+    ("Win Rate by Category",          PLOTS_DIR / "human_by_category.png"),
+    ("Faithfulness by Category",      PLOTS_DIR / "faithfulness_by_cat.png"),
+    ("Summary",                       PLOTS_DIR / "summary.png"),
+]
+
+st.divider()
+if len(remaining_ids) == 0 and not rankings.empty:
+    st.success("All prompts ranked! Generate the results charts below.")
+
+if st.button("Generate results charts"):
+    import subprocess, sys
+
+    # Sync rankings from Sheets to local CSV so analysis scripts can read them
+    if USE_SHEETS:
+        with st.spinner("Syncing votes from Google Sheets..."):
+            sync_df = load_rankings()
+            RANKINGS_CSV.parent.mkdir(parents=True, exist_ok=True)
+            sync_df.to_csv(RANKINGS_CSV, index=False)
+
+    with st.spinner("Running analysis..."):
+        subprocess.run([sys.executable, "-m", "eval.analyze_results"], check=True)
+        subprocess.run([sys.executable, "-m", "eval.plot_results"],    check=True)
+    st.success("Charts ready!")
+
+if any(p.exists() for _, p in PLOT_FILES):
+    st.subheader("Results")
+    col1, col2 = st.columns(2)
+    for i, (title, path) in enumerate(PLOT_FILES):
+        with (col1 if i % 2 == 0 else col2):
+            if path.exists():
+                st.image(str(path), caption=title, use_container_width=True)

@@ -1,0 +1,4081 @@
+run_dir,provider,prompt_id,category,sample,image_path,quality_score,subject_clarity,composition,technical,aesthetic,coherence,parse_error,raw_response
+runs/2026-02-12_core40_k3_1024,gemini,bind_001,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_001__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_001,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_001__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_001,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_001__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_002,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_002__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_002,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_002__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_002,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_002__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_003,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_003__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_003,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_003__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_003,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_003__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_004,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_004__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_004,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_004__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_004,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_004__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_005,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_005__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_005,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_005__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_005,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_005__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_006,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_006__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_006,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_006__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_006,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_006__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_007,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_007__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_007,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_007__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_007,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_007__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_008,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_008__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_008,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_008__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_008,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_008__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_009,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_009__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_009,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_009__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_009,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_009__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_010,binding,1,runs/2026-02-12_core40_k3_1024/images/gemini/bind_010__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_010,binding,2,runs/2026-02-12_core40_k3_1024/images/gemini/bind_010__s2.png,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,bind_010,binding,3,runs/2026-02-12_core40_k3_1024/images/gemini/bind_010__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_001,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_001__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_001,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_001__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_001,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_001__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_002,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_002__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_002,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_002__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_002,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_002__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_003,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_003__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_003,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_003__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_003,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_003__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_004,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_004__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_004,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_004__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_004,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_004__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_005,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_005__s1.PNG,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_005,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_005__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_005,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_005__s3.PNG,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_006,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_006__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_006,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_006__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_006,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_006__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_007,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_007__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_007,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_007__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_007,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_007__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_008,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_008__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_008,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_008__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_008,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_008__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_009,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_009__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_009,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_009__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_009,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_009__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_010,count,1,runs/2026-02-12_core40_k3_1024/images/gemini/count_010__s1.PNG,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_010,count,2,runs/2026-02-12_core40_k3_1024/images/gemini/count_010__s2.PNG,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,count_010,count,3,runs/2026-02-12_core40_k3_1024/images/gemini/count_010__s3.PNG,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_001,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_001__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_001,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_001__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_001,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_001__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_002,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_002__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_002,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_002__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_002,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_002__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_003,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_003__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_003,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_003__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_003,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_003__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_004,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_004__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_004,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_004__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_004,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_004__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_005,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_005__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_005,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_005__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_005,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_005__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_006,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_006__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_006,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_006__s2.PNG,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_006,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_006__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_007,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_007__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_007,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_007__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_007,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_007__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_008,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_008__s1.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_008,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_008__s2.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_008,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_008__s3.PNG,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_009,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_009__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_009,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_009__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_009,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_009__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_010,spatial,1,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_010__s1.png,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_010,spatial,2,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_010__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,spatial_010,spatial,3,runs/2026-02-12_core40_k3_1024/images/gemini/spatial_010__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_001,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_001__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_001,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_001__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_001,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_001__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_002,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_002__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_002,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_002__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_002,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_002__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_003,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_003__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_003,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_003__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_003,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_003__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_004,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_004__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_004,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_004__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_004,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_004__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_005,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_005__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_005,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_005__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_005,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_005__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_006,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_006__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_006,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_006__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_006,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_006__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_007,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_007__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_007,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_007__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_007,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_007__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_008,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_008__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_008,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_008__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_008,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_008__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_009,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_009__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_009,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_009__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_009,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_009__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_010,typography,1,runs/2026-02-12_core40_k3_1024/images/gemini/typ_010__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_010,typography,2,runs/2026-02-12_core40_k3_1024/images/gemini/typ_010__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,gemini,typ_010,typography,3,runs/2026-02-12_core40_k3_1024/images/gemini/typ_010__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_001,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_001__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_001,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_001__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_001,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_001__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_002,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_002__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_002,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_002__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_002,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_002__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_003,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_003__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_003,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_003__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_003,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_003__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_004,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_004__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_004,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_004__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_004,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_004__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_005,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_005__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_005,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_005__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_005,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_005__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_006,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_006__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_006,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_006__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_006,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_006__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_007,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_007__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_007,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_007__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_007,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_007__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_008,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_008__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_008,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_008__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_008,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_008__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_009,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_009__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_009,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_009__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_009,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_009__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_010,binding,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_010__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_010,binding,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_010__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,bind_010,binding,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/bind_010__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_001,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_001__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_001,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_001__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_001,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_001__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_002,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_002__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_002,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_002__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_002,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_002__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_003,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_003__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_003,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_003__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_003,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_003__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_004,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_004__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_004,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_004__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_004,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_004__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_005,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_005__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_005,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_005__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_005,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_005__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_006,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_006__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_006,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_006__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_006,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_006__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_007,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_007__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_007,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_007__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_007,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_007__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_008,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_008__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_008,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_008__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_008,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_008__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_009,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_009__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_009,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_009__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_009,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_009__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_010,count,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_010__s1.png,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_010,count,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_010__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,count_010,count,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/count_010__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_001,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_001__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_001,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_001__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_001,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_001__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_002,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_002__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_002,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_002__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_002,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_002__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_003,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_003__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_003,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_003__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_003,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_003__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_004,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_004__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_004,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_004__s2.png,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_004,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_004__s3.png,0.8,4,4,4,4,4,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 4,
+  ""composition"": 4,
+  ""technical"": 4,
+  ""aesthetic"": 4,
+  ""coherence"": 4
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_005,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_005__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_005,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_005__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_005,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_005__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_006,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_006__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_006,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_006__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_006,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_006__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_007,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_007__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_007,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_007__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_007,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_007__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_008,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_008__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_008,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_008__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_008,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_008__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_009,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_009__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_009,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_009__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_009,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_009__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_010,spatial,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_010__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_010,spatial,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_010__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,spatial_010,spatial,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/spatial_010__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_001,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_001__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_001,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_001__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_001,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_001__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_002,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_002__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_002,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_002__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_002,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_002__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_003,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_003__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_003,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_003__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_003,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_003__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_004,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_004__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_004,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_004__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_004,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_004__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_005,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_005__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_005,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_005__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_005,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_005__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_006,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_006__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_006,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_006__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_006,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_006__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_007,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_007__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_007,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_007__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_007,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_007__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_008,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_008__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_008,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_008__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_008,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_008__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_009,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_009__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_009,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_009__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_009,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_009__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_010,typography,1,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_010__s1.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_010,typography,2,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_010__s2.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"
+runs/2026-02-12_core40_k3_1024,chatgpt,typ_010,typography,3,runs/2026-02-12_core40_k3_1024/images/chatgpt/typ_010__s3.png,1.0,5,5,5,5,5,0,"r 5.
+  - Be critical: reserve 5 for genuinely outstanding quality.
+  - Output ONLY the JSON below, no other text.
+
+JSON schema:
+{""subject_clarity"": ""integer 1-5"", ""composition"": ""integer 1-5"", ""technical"": ""integer 1-5"", ""aesthetic"": ""integer 1-5"", ""coherence"": ""integer 1-5""}
+
+assistant
+```json
+{
+  ""subject_clarity"": 5,
+  ""composition"": 5,
+  ""technical"": 5,
+  ""aesthetic"": 5,
+  ""coherence"": 5
+}
+```"

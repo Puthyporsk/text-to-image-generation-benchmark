@@ -1,0 +1,9 @@
+provider,category,n_images,score_mean,score_std,checks_yes_total,checks_total,score_pct,yes_rate_pct
+chatgpt,binding,30,0.9,0.1640016820771602,135,150,90.0,90.0
+gemini,binding,30,0.94,0.13025174563659145,141,150,94.0,94.0
+chatgpt,count,30,1.0,0.0,117,117,100.0,100.0
+gemini,count,30,1.0,0.0,117,117,100.0,100.0
+chatgpt,spatial,30,1.0,0.0,144,144,100.0,100.0
+gemini,spatial,30,1.0,0.0,144,144,100.0,100.0
+chatgpt,typography,30,0.9,0.20341905108624309,54,60,90.0,90.0
+gemini,typography,30,0.9,0.20341905108624309,54,60,90.0,90.0
