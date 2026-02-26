@@ -442,7 +442,7 @@ with col_r:
     st.subheader(right_label)
     right_path = find_image(run_dir, right_model, pid, sample_k)
     if right_path:
-        st.image(str(right_path), use_container_width=True)
+        st.image(str(right_path), use_column_width=True)
         sl = score_label(faith_df, right_model, pid, sample_k)
         ql = quality_label(quality_df, right_model, pid, sample_k)
         if sl:
@@ -504,11 +504,11 @@ with btn_cols[1]:
         cast_vote(right_model)
 
 with btn_cols[2]:
-    if st.button("🤝 Tie", use_container_width=True):
+    if st.button("🤝 Tie", use_column_width=True):
         cast_vote("tie")
 
 with btn_cols[3]:
-    if st.button("❌ Both fail", use_container_width=True):
+    if st.button("❌ Both fail", use_column_width=True):
         cast_vote("neither")
 
 # ---------------------------------------------------------------------------
@@ -519,12 +519,12 @@ nav_cols = st.columns([1, 8, 1])
 cur_idx = filtered_ids.index(pid)
 
 with nav_cols[0]:
-    if cur_idx > 0 and st.button("← Prev", use_container_width=True):
+    if cur_idx > 0 and st.button("← Prev", use_column_width=True):
         st.session_state["current_pid"] = filtered_ids[cur_idx - 1]
         st.rerun()
 
 with nav_cols[2]:
-    if cur_idx < len(filtered_ids) - 1 and st.button("Next →", use_container_width=True):
+    if cur_idx < len(filtered_ids) - 1 and st.button("Next →", use_column_width=True):
         st.session_state["current_pid"] = filtered_ids[cur_idx + 1]
         st.rerun()
 
