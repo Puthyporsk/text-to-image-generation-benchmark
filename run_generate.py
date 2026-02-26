@@ -6,7 +6,7 @@ import csv
 from tqdm import tqdm
 
 from providers.gemini_imagen import GeminiImagenProvider
-from providers.chatgpt_ui import ChatGPTUIProvider
+from providers.openai_image import OpenAIImageProvider
 
 def load_prompts(jsonl_path: Path) -> List[Dict[str, Any]]:
     prompts = []
@@ -22,6 +22,7 @@ def main(
     prompts_file: str,
     provider_name: str,
     k: int = 3,
+    limit: int = 0,
 ):
     run_path = Path(run_dir)
     if run_path.name.startswith("2026-") and run_path.parent == Path("."):
@@ -33,13 +34,15 @@ def main(
     logs_dir.mkdir(parents=True, exist_ok=True)
 
     prompts = load_prompts(Path(prompts_file))
+    if limit > 0:
+        prompts = prompts[:limit]
 
     if provider_name == "gemini":
         provider = GeminiImagenProvider()
     elif provider_name == "chatgpt":
-        provider = ChatGPTUIProvider()
+        provider = OpenAIImageProvider()
     else:
-        raise ValueError("provider_name must be 'gemini' or 'chatgpt' for now")
+        raise ValueError("provider_name must be 'gemini' or 'chatgpt'")
 
     log_path = logs_dir / f"{provider_name}_generation_log.csv"
     write_header = not log_path.exists()
@@ -53,6 +56,9 @@ def main(
             prompt_id = p["prompt_id"]
             prompt_text = p["prompt"]
             for s in range(1, k + 1):
+                out_path = images_dir / f"{prompt_id}__s{s}.png"
+                if out_path.exists():
+                    continue
                 result = provider.generate_one(
                     prompt_id=prompt_id,
                     prompt=prompt_text,
@@ -77,6 +83,7 @@ if __name__ == "__main__":
     ap.add_argument("--prompts_file", required=True)
     ap.add_argument("--provider", required=True, choices=["gemini", "chatgpt"])
     ap.add_argument("--k", type=int, default=3)
+    ap.add_argument("--limit", type=int, default=0, help="Only process first N prompts (0 = all)")
     args = ap.parse_args()
 
-    main(args.run_dir, args.prompts_file, args.provider, args.k)
+    main(args.run_dir, args.prompts_file, args.provider, args.k, args.limit)

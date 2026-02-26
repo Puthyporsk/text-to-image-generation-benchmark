@@ -5,18 +5,23 @@ pandas
 tqdm
 rapidfuzz
 tesseract
+dotenv
 
 # google imagen / gemini
 google-genai
+
+# openai image generation
+openai
 
 # ocr
 pytesseract
 opencv-python
 
-# vlm judge (later, but install now)
-# torch
-# transformers
-# accelerate
+# vlm judge
+torch
+transformers
+accelerate
+qwen-vl-utils
 
 # human ui
 streamlit

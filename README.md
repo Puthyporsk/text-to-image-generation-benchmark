@@ -1,4 +1,4 @@
-# Gemini vs ChatGPT: Benchmark for Text-to-Image Generation
+# Gemini (Imagen) vs GPT Image 1 Mini: Text-to-Image Generation Benchmark
 
 ## Project structure
 - `prompts/`: prompt suite in JSONL (each prompt has atomic `checks`)

@@ -30,6 +30,7 @@ env/
 .env.*
 *.key
 *.pem
+openai-api-key.txt
 
 # ===== Editor / IDE =====
 .vscode/
