@@ -347,8 +347,8 @@ with st.sidebar:
 
     st.divider()
 
-    # Progress
-    rankings = load_rankings()
+    # Progress — don't load any votes until the user has entered their name
+    rankings = load_rankings() if annotator else pd.DataFrame(columns=RANKINGS_FIELDS)
     ranked_in_filter = sum(
         1 for pid in filtered_ids if done_key(rankings, pid, sample_k, annotator)
     )
