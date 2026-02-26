@@ -50,8 +50,9 @@ QUALITY_CSV = Path("results/quality_scores.csv")
 def _cfg(key: str) -> str:
     """Read from st.secrets (Streamlit Cloud) with fallback to os.environ (.env)."""
     try:
-        return st.secrets.get(key, os.environ.get(key, ""))
-    except Exception:
+        val = st.secrets[key]
+        return str(val) if val else os.environ.get(key, "")
+    except (KeyError, AttributeError, FileNotFoundError):
         return os.environ.get(key, "")
 
 def _has_gcp_secret() -> bool:

@@ -31,6 +31,8 @@ env/
 *.key
 *.pem
 openai-api-key.txt
+.streamlit/secrets.toml
+scripts/gen_secrets.py
 
 # ===== Editor / IDE =====
 .vscode/
