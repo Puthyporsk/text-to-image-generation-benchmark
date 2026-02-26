@@ -202,15 +202,18 @@ def save_vote(
             all_values = [RANKINGS_FIELDS]
         headers = all_values[0]
         try:
-            pid_col    = headers.index("prompt_id")
-            sample_col = headers.index("sample")
+            pid_col        = headers.index("prompt_id")
+            sample_col     = headers.index("sample")
+            annotator_col  = headers.index("annotator")
         except ValueError:
             sheet.append_row(row_values)
             return
-        # Upsert: update existing row if found
+        # Upsert: update existing row for same prompt + sample + annotator
         for i, row in enumerate(all_values[1:], start=2):
-            if len(row) > max(pid_col, sample_col):
-                if row[pid_col] == str(prompt_id) and row[sample_col] == str(sample):
+            if len(row) > max(pid_col, sample_col, annotator_col):
+                if (row[pid_col] == str(prompt_id)
+                        and row[sample_col] == str(sample)
+                        and row[annotator_col] == str(annotator)):
                     col_end = chr(ord("A") + len(RANKINGS_FIELDS) - 1)
                     sheet.update(f"A{i}:{col_end}{i}", [row_values])
                     return
@@ -221,7 +224,7 @@ def save_vote(
     RANKINGS_CSV.parent.mkdir(parents=True, exist_ok=True)
     if RANKINGS_CSV.exists():
         df = pd.read_csv(RANKINGS_CSV)
-        mask = (df["prompt_id"] == prompt_id) & (df["sample"].astype(str) == str(sample))
+        mask = (df["prompt_id"] == prompt_id) & (df["sample"].astype(str) == str(sample)) & (df["annotator"] == annotator)
         if mask.any():
             df.loc[mask, list(new_row.keys())] = list(new_row.values())
             df.to_csv(RANKINGS_CSV, index=False)
@@ -232,10 +235,12 @@ def save_vote(
     df.to_csv(RANKINGS_CSV, index=False)
 
 
-def done_key(rankings: pd.DataFrame, pid: str, sample: int) -> bool:
+def done_key(rankings: pd.DataFrame, pid: str, sample: int, annotator: str = "") -> bool:
     if rankings.empty:
         return False
     mask = (rankings["prompt_id"] == pid) & (rankings["sample"].astype(str) == str(sample))
+    if annotator and "annotator" in rankings.columns:
+        mask = mask & (rankings["annotator"] == annotator)
     return bool(mask.any())
 
 
@@ -326,7 +331,7 @@ with st.sidebar:
     st.title("⚙️ Settings")
 
     run_dir = st.text_input("Run directory", value="runs/2026-02-12_core40_k3_1024")
-    annotator = st.text_input("Your name", value="anonymous")
+    annotator = st.text_input("Your name", value="", placeholder="Enter your name")
     sample_k = st.number_input("Sample #", min_value=1, max_value=3, value=1, step=1)
 
     blind_mode = st.toggle(
@@ -345,9 +350,9 @@ with st.sidebar:
     # Progress
     rankings = load_rankings()
     ranked_in_filter = sum(
-        1 for pid in filtered_ids if done_key(rankings, pid, sample_k)
+        1 for pid in filtered_ids if done_key(rankings, pid, sample_k, annotator)
     )
-    remaining_ids = [pid for pid in filtered_ids if not done_key(rankings, pid, sample_k)]
+    remaining_ids = [pid for pid in filtered_ids if not done_key(rankings, pid, sample_k, annotator)]
 
     st.metric("Total prompts", len(filtered_ids))
     st.metric("Ranked (sample %d)" % sample_k, ranked_in_filter)
@@ -421,7 +426,7 @@ with cols[1]:
     st.markdown(f"**Category:** `{item['category']}`")
     st.markdown(f"**Prompt ID:** `{pid}`")
     st.markdown(f"**Sample:** {sample_k}")
-    already = done_key(rankings, pid, sample_k)
+    already = done_key(rankings, pid, sample_k, annotator)
     if already:
         row = rankings[
             (rankings["prompt_id"] == pid)
@@ -471,6 +476,11 @@ with col_r:
 # ---------------------------------------------------------------------------
 
 st.divider()
+
+if not annotator:
+    st.warning("Please enter your name in the sidebar before voting.")
+    st.stop()
+
 notes = st.text_input("Notes (optional)", key=f"notes_{pid}_{sample_k}", placeholder="e.g. left has better color, right has extra object...")
 
 btn_cols = st.columns(4)
@@ -498,7 +508,7 @@ def cast_vote(winner_model: str) -> None:
     next_unranked = [
         p for p in filtered_ids
         if (p, sample_k) not in st.session_state["local_voted"]
-        and not done_key(fresh_rankings, p, sample_k)
+        and not done_key(fresh_rankings, p, sample_k, annotator)
     ]
     if next_unranked:
         st.session_state["current_pid"] = next_unranked[0]
