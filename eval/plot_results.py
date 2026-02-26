@@ -14,9 +14,11 @@ Outputs (saved to results/plots/):
 
 Usage:
     python -m eval.plot_results
+    python -m eval.plot_results --annotator "Alice"
 """
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 
 import matplotlib
@@ -283,12 +285,20 @@ def plot_summary(h: pd.DataFrame, f: pd.DataFrame) -> plt.Figure:
 # ---------------------------------------------------------------------------
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--annotator", default="", help="Filter human rankings to this annotator only")
+    args = parser.parse_args()
+
     for p in (RANKINGS_CSV, FAITH_CSV, QUALITY_CSV):
         if not p.exists():
             raise SystemExit(f"Required file not found: {p}  — run eval/analyze_results.py first.")
 
     print("Loading data...")
     h, f, q = load()
+
+    if args.annotator and "annotator" in h.columns:
+        h = h[h["annotator"] == args.annotator].copy()
+        print(f"  Filtered to annotator '{args.annotator}': {len(h)} votes")
 
     print("Generating plots...")
     save(plot_human_overall(h),       "human_overall.png")

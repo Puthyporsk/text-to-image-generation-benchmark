@@ -12,9 +12,11 @@ Outputs:
 
 Usage:
     python -m eval.analyze_results
+    python -m eval.analyze_results --annotator "Alice"
 """
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 
 import pandas as pd
@@ -185,10 +187,18 @@ def agreement_analysis(
 # ---------------------------------------------------------------------------
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--annotator", default="", help="Filter human rankings to this annotator only")
+    args = parser.parse_args()
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     print("Loading data...")
     h, f, q = load_data()
+
+    if args.annotator and "annotator" in h.columns:
+        h = h[h["annotator"] == args.annotator].copy()
+        print(f"  Filtered to annotator '{args.annotator}': {len(h)} votes")
     print(f"  Human votes:       {len(h)}")
     print(f"  Faithfulness rows: {len(f)}")
     print(f"  Quality rows:      {len(q)}")

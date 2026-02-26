@@ -592,8 +592,9 @@ if st.button("Generate results charts"):
             sync_df.to_csv(RANKINGS_CSV, index=False)
 
     with st.spinner("Running analysis..."):
-        subprocess.run([sys.executable, "-m", "eval.analyze_results"], check=True)
-        subprocess.run([sys.executable, "-m", "eval.plot_results"],    check=True)
+        annotator_args = ["--annotator", annotator] if annotator else []
+        subprocess.run([sys.executable, "-m", "eval.analyze_results"] + annotator_args, check=True)
+        subprocess.run([sys.executable, "-m", "eval.plot_results"]    + annotator_args, check=True)
     st.success("Charts ready!")
 
 if any(p.exists() for _, p in PLOT_FILES):
