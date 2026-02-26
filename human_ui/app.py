@@ -340,7 +340,7 @@ with st.sidebar:
     st.metric("Remaining", len(remaining_ids))
     st.progress(ranked_in_filter / max(len(filtered_ids), 1))
 
-    if remaining_ids and st.button("→ Jump to next unranked", use_container_width=True):
+    if remaining_ids and st.button("→ Jump to next unranked", use_column_width=True):
         st.session_state["current_pid"] = remaining_ids[0]
 
     st.divider()
@@ -428,7 +428,7 @@ with col_l:
     st.subheader(left_label)
     left_path = find_image(run_dir, left_model, pid, sample_k)
     if left_path:
-        st.image(str(left_path), use_container_width=True)
+        st.image(str(left_path), use_column_width=True)
         sl = score_label(faith_df, left_model, pid, sample_k)
         ql = quality_label(quality_df, left_model, pid, sample_k)
         if sl:
@@ -442,7 +442,7 @@ with col_r:
     st.subheader(right_label)
     right_path = find_image(run_dir, right_model, pid, sample_k)
     if right_path:
-        st.image(str(right_path), use_container_width=True)
+        st.image(str(right_path), use_column_width=True)
         sl = score_label(faith_df, right_model, pid, sample_k)
         ql = quality_label(quality_df, right_model, pid, sample_k)
         if sl:
@@ -504,11 +504,11 @@ with btn_cols[1]:
         cast_vote(right_model)
 
 with btn_cols[2]:
-    if st.button("🤝 Tie", use_container_width=True):
+    if st.button("🤝 Tie", use_column_width=True):
         cast_vote("tie")
 
 with btn_cols[3]:
-    if st.button("❌ Both fail", use_container_width=True):
+    if st.button("❌ Both fail", use_column_width=True):
         cast_vote("neither")
 
 # ---------------------------------------------------------------------------
@@ -519,12 +519,12 @@ nav_cols = st.columns([1, 8, 1])
 cur_idx = filtered_ids.index(pid)
 
 with nav_cols[0]:
-    if cur_idx > 0 and st.button("← Prev", use_container_width=True):
+    if cur_idx > 0 and st.button("← Prev", use_column_width=True):
         st.session_state["current_pid"] = filtered_ids[cur_idx - 1]
         st.rerun()
 
 with nav_cols[2]:
-    if cur_idx < len(filtered_ids) - 1 and st.button("Next →", use_container_width=True):
+    if cur_idx < len(filtered_ids) - 1 and st.button("Next →", use_column_width=True):
         st.session_state["current_pid"] = filtered_ids[cur_idx + 1]
         st.rerun()
 
@@ -578,4 +578,4 @@ if any(p.exists() for _, p in PLOT_FILES):
     for i, (title, path) in enumerate(PLOT_FILES):
         with (col1 if i % 2 == 0 else col2):
             if path.exists():
-                st.image(str(path), caption=title, use_container_width=True)
+                st.image(str(path), caption=title, use_column_width=True)
