@@ -44,15 +44,28 @@ FAITH_CSV = Path("results/faithfulness_scores.csv")
 QUALITY_CSV = Path("results/quality_scores.csv")
 
 # ---------------------------------------------------------------------------
-# Deployment config  (set in .env or environment; falls back to local files)
+# Deployment config  (st.secrets for Streamlit Cloud, .env for local dev)
 # ---------------------------------------------------------------------------
 
-GOOGLE_SHEET_ID  = os.environ.get("GOOGLE_SHEET_ID", "")
-GOOGLE_SA_JSON   = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON", "")
-GCS_BUCKET            = os.environ.get("GCS_BUCKET", "")
-CLOUDINARY_CLOUD_NAME = os.environ.get("CLOUDINARY_CLOUD_NAME", "")
+def _cfg(key: str) -> str:
+    """Read from st.secrets (Streamlit Cloud) with fallback to os.environ (.env)."""
+    try:
+        return st.secrets.get(key, os.environ.get(key, ""))
+    except Exception:
+        return os.environ.get(key, "")
 
-USE_SHEETS     = bool(GOOGLE_SHEET_ID and GOOGLE_SA_JSON)
+def _has_gcp_secret() -> bool:
+    try:
+        return "gcp_service_account" in st.secrets
+    except Exception:
+        return False
+
+GOOGLE_SHEET_ID       = _cfg("GOOGLE_SHEET_ID")
+GOOGLE_SA_JSON        = _cfg("GOOGLE_SERVICE_ACCOUNT_JSON")
+GCS_BUCKET            = _cfg("GCS_BUCKET")
+CLOUDINARY_CLOUD_NAME = _cfg("CLOUDINARY_CLOUD_NAME")
+
+USE_SHEETS     = bool(GOOGLE_SHEET_ID and (GOOGLE_SA_JSON or _has_gcp_secret()))
 USE_GCS        = bool(GCS_BUCKET)
 USE_CLOUDINARY = bool(CLOUDINARY_CLOUD_NAME)
 
