@@ -366,7 +366,7 @@ with st.sidebar:
     st.metric("Remaining", len(remaining_ids))
     st.progress(ranked_in_filter / max(len(filtered_ids), 1))
 
-    if remaining_ids and st.button("→ Jump to next unranked", use_container_width=True):
+    if remaining_ids and st.button("→ Jump to next unranked", width="stretch"):
         st.session_state["current_pid"] = remaining_ids[0]
 
     st.divider()
@@ -454,7 +454,7 @@ with col_l:
     st.subheader(left_label)
     left_path = find_image(run_dir, left_model, pid, sample_k)
     if left_path:
-        st.image(str(left_path), use_column_width=True)
+        st.image(str(left_path), width="stretch")
         sl = score_label(faith_df, left_model, pid, sample_k)
         ql = quality_label(quality_df, left_model, pid, sample_k)
         if sl:
@@ -468,7 +468,7 @@ with col_r:
     st.subheader(right_label)
     right_path = find_image(run_dir, right_model, pid, sample_k)
     if right_path:
-        st.image(str(right_path), use_column_width=True)
+        st.image(str(right_path), width="stretch")
         sl = score_label(faith_df, right_model, pid, sample_k)
         ql = quality_label(quality_df, right_model, pid, sample_k)
         if sl:
@@ -527,19 +527,19 @@ left_btn_label  = f"👈 {left_label} is better"
 right_btn_label = f"{right_label} is better 👉"
 
 with btn_cols[0]:
-    if st.button(left_btn_label, use_container_width=True, type="primary"):
+    if st.button(left_btn_label, width="stretch", type="primary"):
         cast_vote(left_model)
 
 with btn_cols[1]:
-    if st.button(right_btn_label, use_container_width=True, type="primary"):
+    if st.button(right_btn_label, width="stretch", type="primary"):
         cast_vote(right_model)
 
 with btn_cols[2]:
-    if st.button("🤝 Tie", use_container_width=True):
+    if st.button("🤝 Tie", width="stretch"):
         cast_vote("tie")
 
 with btn_cols[3]:
-    if st.button("❌ Both fail", use_container_width=True):
+    if st.button("❌ Both fail", width="stretch"):
         cast_vote("neither")
 
 # ---------------------------------------------------------------------------
@@ -550,12 +550,12 @@ nav_cols = st.columns([1, 8, 1])
 cur_idx = filtered_ids.index(pid)
 
 with nav_cols[0]:
-    if cur_idx > 0 and st.button("← Prev", use_container_width=True):
+    if cur_idx > 0 and st.button("← Prev", width="stretch"):
         st.session_state["current_pid"] = filtered_ids[cur_idx - 1]
         st.rerun()
 
 with nav_cols[2]:
-    if cur_idx < len(filtered_ids) - 1 and st.button("Next →", use_container_width=True):
+    if cur_idx < len(filtered_ids) - 1 and st.button("Next →", width="stretch"):
         st.session_state["current_pid"] = filtered_ids[cur_idx + 1]
         st.rerun()
 
@@ -568,7 +568,7 @@ if not rankings.empty:
         display_cols = ["timestamp", "prompt_id", "category", "sample", "winner", "annotator", "notes"]
         st.dataframe(
             rankings[display_cols].sort_values("timestamp", ascending=False),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -591,19 +591,25 @@ if len(remaining_ids) == 0 and not rankings.empty:
 if st.button("Generate results charts"):
     import subprocess, sys
 
-    # Sync rankings from Sheets to local CSV so analysis scripts can read them
-    if USE_SHEETS:
-        with st.spinner("Syncing votes from Google Sheets..."):
-            sync_df = load_rankings()
-            RANKINGS_CSV.parent.mkdir(parents=True, exist_ok=True)
-            sync_df.to_csv(RANKINGS_CSV, index=False)
+    if rankings.empty:
+        st.error("No votes recorded yet. Cast some votes before generating charts.")
+    else:
+        # Sync rankings from Sheets to local CSV so analysis scripts can read them
+        if USE_SHEETS:
+            with st.spinner("Syncing votes from Google Sheets..."):
+                sync_df = load_rankings()
+                RANKINGS_CSV.parent.mkdir(parents=True, exist_ok=True)
+                sync_df.to_csv(RANKINGS_CSV, index=False)
 
-    with st.spinner("Running analysis..."):
-        annotator_args = ["--annotator", annotator] if annotator else []
-        plots_dir_args = ["--plots-dir", str(PLOTS_DIR)]
-        subprocess.run([sys.executable, "-m", "eval.analyze_results"] + annotator_args, check=True)
-        subprocess.run([sys.executable, "-m", "eval.plot_results"]    + annotator_args + plots_dir_args, check=True)
-    st.success("Charts ready!")
+        try:
+            with st.spinner("Running analysis..."):
+                annotator_args = ["--annotator", annotator] if annotator else []
+                plots_dir_args = ["--plots-dir", str(PLOTS_DIR)]
+                subprocess.run([sys.executable, "-m", "eval.analyze_results"] + annotator_args, check=True)
+                subprocess.run([sys.executable, "-m", "eval.plot_results"]    + annotator_args + plots_dir_args, check=True)
+            st.success("Charts ready!")
+        except subprocess.CalledProcessError as e:
+            st.error(f"Failed to generate charts: {e}")
 
 if any(p.exists() for _, p in PLOT_FILES):
     st.subheader("Results")
@@ -611,4 +617,4 @@ if any(p.exists() for _, p in PLOT_FILES):
     for i, (title, path) in enumerate(PLOT_FILES):
         with (col1 if i % 2 == 0 else col2):
             if path.exists():
-                st.image(str(path), caption=title, use_column_width=True)
+                st.image(str(path), caption=title, width="stretch")

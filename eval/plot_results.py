@@ -92,7 +92,7 @@ def plot_human_overall(h: pd.DataFrame) -> plt.Figure:
     ax.set_xlim(0, 100)
     ax.set_yticks([])
     ax.set_xlabel("Share of votes (%)")
-    ax.set_title("Overall Human Preference  (n=120 votes)", fontsize=13, fontweight="bold")
+    ax.set_title(f"Overall Human Preference  (n={n} votes)", fontsize=13, fontweight="bold")
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.18), ncol=4, fontsize=9)
     ax.spines[["top", "right", "left"]].set_visible(False)
     fig.tight_layout()

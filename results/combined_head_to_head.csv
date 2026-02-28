@@ -29,7 +29,7 @@ bind_009,3,2026-02-25 20:04:28,runs/2026-02-12_core40_k3_1024,binding,chatgpt,ch
 bind_010,1,2026-02-25 19:56:15,runs/2026-02-12_core40_k3_1024,binding,gemini,gemini,chatgpt,0,,por,1.0,1.0,1.0,1.0,tie,tie
 bind_010,2,2026-02-25 20:02:43,runs/2026-02-12_core40_k3_1024,binding,gemini,chatgpt,gemini,0,,por,1.0,1.0,1.0,0.8,tie,chatgpt
 bind_010,3,2026-02-25 20:04:32,runs/2026-02-12_core40_k3_1024,binding,gemini,chatgpt,gemini,0,,por,1.0,1.0,1.0,1.0,tie,tie
-count_001,1,2026-02-25 19:46:56,runs/2026-02-12_core40_k3_1024,count,tie,chatgpt,gemini,0,,por,1.0,1.0,1.0,1.0,tie,tie
+count_001,1,2026-02-25T22:53:04,runs/2026-02-12_core40_k3_1024,count,gemini,gemini,chatgpt,0,,por,1.0,1.0,1.0,1.0,tie,tie
 count_001,2,2026-02-25 20:00:38,runs/2026-02-12_core40_k3_1024,count,tie,gemini,chatgpt,0,,por,1.0,1.0,1.0,1.0,tie,tie
 count_001,3,2026-02-25 20:03:16,runs/2026-02-12_core40_k3_1024,count,tie,gemini,chatgpt,0,,por,1.0,1.0,1.0,1.0,tie,tie
 count_002,1,2026-02-25 19:47:03,runs/2026-02-12_core40_k3_1024,count,tie,gemini,chatgpt,0,,por,1.0,1.0,1.0,1.0,tie,tie
