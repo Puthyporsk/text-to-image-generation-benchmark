@@ -275,6 +275,11 @@ def main() -> None:
         "=" * 60,
         "VLM FAITHFULNESS SCORES",
         "=" * 60,
+        "  Judge model : Qwen/Qwen2-VL-7B-Instruct",
+        "  NOTE: Scores reflect a single automated judge and may exhibit",
+        "  ceiling effects for semantically straightforward prompts.",
+        "  Small deltas (<5 pp) should be interpreted cautiously.",
+        "",
     ]
     for _, row in f_model.iterrows():
         lines.append(
@@ -306,6 +311,11 @@ def main() -> None:
         "=" * 60,
         "VLM QUALITY SCORES",
         "=" * 60,
+        "  Judge model : Qwen/Qwen2-VL-7B-Instruct",
+        "  NOTE: Quality scores are rubric-based (5 dimensions, 1-5 scale)",
+        "  and may compress toward the high end for professionally rendered",
+        "  AI images. Differences <3 pp are unlikely to be meaningful.",
+        "",
     ]
     for _, row in q_model.iterrows():
         lines.append(

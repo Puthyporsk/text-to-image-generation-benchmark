@@ -12,7 +12,7 @@ from transformers import Qwen2VLForConditionalGeneration
 from qwen_vl_utils import process_vision_info
 
 
-JUDGE_MODEL = "Qwen/Qwen2-VL-2B-Instruct"
+JUDGE_MODEL = "Qwen/Qwen2-VL-7B-Instruct"
 ALLOWED_PROVIDERS = {"gemini", "chatgpt"}
 
 SYSTEM_INSTR = (
@@ -197,7 +197,7 @@ def main():
 
     # Output locations:
     # - judge JSONL logs: runs/<run>/logs/
-    judge_out = Path(args.judge_out) if args.judge_out else (run_paths["logs_dir"] / "vlm_judge_qwen2vl2b.jsonl")
+    judge_out = Path(args.judge_out) if args.judge_out else (run_paths["logs_dir"] / "vlm_judge_qwen2vl7b.jsonl")
 
     # sanity: refuse writing judge logs outside this run (it’s not CSV, but keep it tidy)
     if run_paths["run_dir"].resolve() not in judge_out.resolve().parents:

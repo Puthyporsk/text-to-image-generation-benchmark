@@ -32,7 +32,7 @@ from typing import Any, Dict, List, Tuple
 import torch
 from PIL import Image
 from tqdm import tqdm
-from transformers import AutoProcessor, Qwen2VLForConditionalGeneration
+from transformers import AutoProcessor, BitsAndBytesConfig, Qwen2VLForConditionalGeneration
 from qwen_vl_utils import process_vision_info
 
 # ---------------------------------------------------------------------------
@@ -64,7 +64,7 @@ RUBRIC: List[Tuple[str, str]] = [
 
 RUBRIC_DIMS = [dim for dim, _ in RUBRIC]
 
-JUDGE_MODEL = "Qwen/Qwen2-VL-2B-Instruct"
+JUDGE_MODEL = "Qwen/Qwen2-VL-7B-Instruct"
 
 
 def discover_providers(run_dir: Path) -> list[str]:
@@ -298,10 +298,12 @@ def main() -> None:
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"[ENV]  device = {device}")
     print(f"[ENV]  loading {JUDGE_MODEL} ...")
+    bnb_config = BitsAndBytesConfig(load_in_4bit=True) if device == "cuda" else None
     processor = AutoProcessor.from_pretrained(JUDGE_MODEL)
     model = Qwen2VLForConditionalGeneration.from_pretrained(
         JUDGE_MODEL,
         torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+        quantization_config=bnb_config,
         device_map="auto",
     )
     model.eval()
