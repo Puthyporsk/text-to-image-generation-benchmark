@@ -21,10 +21,14 @@ from pathlib import Path
 
 import pandas as pd
 
+from providers.registry import label as provider_label
+
 RANKINGS_CSV = Path("results/human_rankings.csv")
 FAITH_CSV    = Path("results/faithfulness_scores.csv")
 QUALITY_CSV  = Path("results/quality_scores.csv")
 OUT_DIR      = Path("results")
+
+_NON_MODEL = {"tie", "neither"}  # winner values that are not provider names
 
 
 # ---------------------------------------------------------------------------
@@ -62,13 +66,14 @@ def human_summary(
         .unstack(fill_value=0)
         .reset_index()
     )
-    for col in ("gemini", "chatgpt", "tie", "neither"):
+    model_cols = sorted(c for c in cat.columns if c not in _NON_MODEL and c != "category")
+    for col in model_cols + ["tie", "neither"]:
         if col not in cat.columns:
             cat[col] = 0
-    cat["total"]    = cat[["gemini", "chatgpt", "tie", "neither"]].sum(axis=1)
-    cat["decisive"] = cat["gemini"] + cat["chatgpt"]
-    cat["gemini_rate"]  = (cat["gemini"]  / cat["decisive"].clip(lower=1) * 100).round(1)
-    cat["chatgpt_rate"] = (cat["chatgpt"] / cat["decisive"].clip(lower=1) * 100).round(1)
+    cat["total"]    = cat[model_cols + ["tie", "neither"]].sum(axis=1)
+    cat["decisive"] = cat[model_cols].sum(axis=1)
+    for m in model_cols:
+        cat[f"{m}_rate"] = (cat[m] / cat["decisive"].clip(lower=1) * 100).round(1)
 
     return counts, cat
 
@@ -99,9 +104,10 @@ def vlm_by_model_and_cat(
         .reset_index()
     )
     pivot.columns.name = None
-    if "gemini" in pivot.columns and "chatgpt" in pivot.columns:
-        pivot["delta_gemini_minus_chatgpt"] = (
-            pivot["gemini"] - pivot["chatgpt"]
+    prov_cols = [c for c in pivot.columns if c != "category"]
+    if len(prov_cols) == 2:
+        pivot[f"delta_{prov_cols[0]}_minus_{prov_cols[1]}"] = (
+            pivot[prov_cols[0]] - pivot[prov_cols[1]]
         ).round(1)
 
     return by_model, pivot
@@ -116,6 +122,10 @@ def agreement_analysis(
     f: pd.DataFrame,
     q: pd.DataFrame,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
+    # Derive providers from VLM data
+    providers   = sorted(f["provider"].unique())
+    q_providers = sorted(q["provider"].unique())
+
     # Wide faithfulness (one row per prompt × sample)
     f_wide = (
         f.pivot_table(
@@ -126,9 +136,7 @@ def agreement_analysis(
         .reset_index()
     )
     f_wide.columns.name = None
-    f_wide = f_wide.rename(
-        columns={"gemini": "faith_gemini", "chatgpt": "faith_chatgpt"}
-    )
+    f_wide = f_wide.rename(columns={p: f"faith_{p}" for p in providers})
 
     # Wide quality
     q_wide = (
@@ -140,9 +148,7 @@ def agreement_analysis(
         .reset_index()
     )
     q_wide.columns.name = None
-    q_wide = q_wide.rename(
-        columns={"gemini": "qual_gemini", "chatgpt": "qual_chatgpt"}
-    )
+    q_wide = q_wide.rename(columns={p: f"qual_{p}" for p in q_providers})
 
     # Deduplicate human votes: keep last vote per prompt+sample
     h_dedup = (
@@ -158,26 +164,33 @@ def agreement_analysis(
         .merge(q_wide, on=["prompt_id", "sample"], how="left")
     )
 
-    def vlm_winner(a, b, model_a="gemini", model_b="chatgpt"):
-        if pd.isna(a) or pd.isna(b):
-            return None
-        if a > b:
-            return model_a
-        if b > a:
-            return model_b
-        return "tie"
+    if len(providers) >= 2:
+        prov_a, prov_b = providers[0], providers[1]
 
-    merged["faith_winner"] = merged.apply(
-        lambda r: vlm_winner(r["faith_gemini"], r["faith_chatgpt"]), axis=1
-    )
-    merged["qual_winner"] = merged.apply(
-        lambda r: vlm_winner(r["qual_gemini"], r["qual_chatgpt"]), axis=1
-    )
+        def vlm_winner(a, b, model_a=prov_a, model_b=prov_b):
+            if pd.isna(a) or pd.isna(b):
+                return None
+            if a > b:
+                return model_a
+            if b > a:
+                return model_b
+            return "tie"
+
+        merged["faith_winner"] = merged.apply(
+            lambda r: vlm_winner(r.get(f"faith_{prov_a}"), r.get(f"faith_{prov_b}")), axis=1
+        )
+        merged["qual_winner"] = merged.apply(
+            lambda r: vlm_winner(r.get(f"qual_{prov_a}"), r.get(f"qual_{prov_b}")), axis=1
+        )
+    else:
+        merged["faith_winner"] = None
+        merged["qual_winner"]  = None
 
     # Restrict agreement calculation to decisive human votes
-    decisive = merged[merged["winner"].isin(["gemini", "chatgpt"])].copy()
-    decisive["faith_agree"] = decisive["winner"] == decisive["faith_winner"]
-    decisive["qual_agree"]  = decisive["winner"] == decisive["qual_winner"]
+    decisive = merged[merged["winner"].isin(providers)].copy()
+    if "faith_winner" in decisive.columns:
+        decisive["faith_agree"] = decisive["winner"] == decisive["faith_winner"]
+        decisive["qual_agree"]  = decisive["winner"] == decisive["qual_winner"]
 
     return merged, decisive
 
@@ -185,6 +198,7 @@ def agreement_analysis(
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -210,38 +224,42 @@ def main() -> None:
     # -------------------------------------------------------------------
     counts, cat = human_summary(h)
 
-    n       = len(h)
-    n_g     = int((h["winner"] == "gemini").sum())
-    n_c     = int((h["winner"] == "chatgpt").sum())
-    n_tie   = int((h["winner"] == "tie").sum())
-    n_nei   = int((h["winner"] == "neither").sum())
-    n_dec   = n_g + n_c
+    n      = len(h)
+    models = sorted(w for w in h["winner"].unique() if w not in _NON_MODEL)
+    n_by   = {m: int((h["winner"] == m).sum()) for m in models}
+    n_tie  = int((h["winner"] == "tie").sum())
+    n_nei  = int((h["winner"] == "neither").sum())
+    n_dec  = sum(n_by.values())
 
     lines += [
         "=" * 60,
         "HUMAN RANKINGS SUMMARY",
         "=" * 60,
         f"Total votes  : {n}",
-        f"  Gemini wins: {n_g}  ({n_g/n*100:.1f}%)",
-        f"  ChatGPT wins:{n_c}  ({n_c/n*100:.1f}%)",
+    ]
+    for m in models:
+        lines.append(f"  {provider_label(m)} wins: {n_by[m]}  ({n_by[m]/n*100:.1f}%)")
+    lines += [
         f"  Tie          {n_tie}  ({n_tie/n*100:.1f}%)",
         f"  Both fail:   {n_nei}  ({n_nei/n*100:.1f}%)",
     ]
     if n_dec > 0:
-        lines += [
-            f"Decisive (excl. tie/neither): {n_dec}",
-            f"  Gemini:  {n_g}/{n_dec} = {n_g/n_dec*100:.1f}%",
-            f"  ChatGPT: {n_c}/{n_dec} = {n_c/n_dec*100:.1f}%",
-        ]
+        lines.append(f"Decisive (excl. tie/neither): {n_dec}")
+        for m in models:
+            lines.append(f"  {provider_label(m)}: {n_by[m]}/{n_dec} = {n_by[m]/n_dec*100:.1f}%")
 
     lines.append("\nBy category:")
     for _, row in cat.iterrows():
         dec_str = ""
         if row["decisive"] > 0:
-            dec_str = f"  -> decisive: Gemini {row['gemini_rate']:.0f}% vs ChatGPT {row['chatgpt_rate']:.0f}%"
+            rates = " vs ".join(
+                f"{provider_label(m)} {row.get(f'{m}_rate', 0):.0f}%" for m in models
+            )
+            dec_str = f"  -> decisive: {rates}"
+        model_str = "  ".join(f"{m[0].upper()}={int(row.get(m, 0))}" for m in models)
         lines.append(
-            f"  {row['category']:12s}: G={int(row['gemini'])} C={int(row['chatgpt'])} "
-            f"Tie={int(row['tie'])} Neither={int(row['neither'])}{dec_str}"
+            f"  {row['category']:12s}: {model_str}  "
+            f"Tie={int(row.get('tie', 0))} Neither={int(row.get('neither', 0))}{dec_str}"
         )
 
     counts.to_csv(OUT_DIR / "human_win_rates.csv", index=False)
@@ -264,14 +282,19 @@ def main() -> None:
             f"(+/-{row['std_pct']:.1f}%,  n={int(row['n'])})"
         )
 
+    f_prov_cols = [c for c in f_cat.columns if c not in {"category"} and not c.startswith("delta_")]
+    f_delta_col = next((c for c in f_cat.columns if c.startswith("delta_")), None)
     lines.append("\nBy category:")
     for _, row in f_cat.iterrows():
-        g = row.get("gemini", float("nan"))
-        c = row.get("chatgpt", float("nan"))
-        d = row.get("delta_gemini_minus_chatgpt", float("nan"))
-        lines.append(
-            f"  {row['category']:12s}: Gemini {g:.1f}% | ChatGPT {c:.1f}% | delta {d:+.1f}%"
+        scores_str = " | ".join(
+            f"{provider_label(p)} {row.get(p, float('nan')):.1f}%" for p in f_prov_cols
         )
+        d_str = (
+            f" | delta {row[f_delta_col]:+.1f}%"
+            if f_delta_col and not pd.isna(row.get(f_delta_col))
+            else ""
+        )
+        lines.append(f"  {row['category']:12s}: {scores_str}{d_str}")
 
     # -------------------------------------------------------------------
     # 3. VLM quality
@@ -290,14 +313,19 @@ def main() -> None:
             f"(+/-{row['std_pct']:.1f}%,  n={int(row['n'])})"
         )
 
+    q_prov_cols = [c for c in q_cat.columns if c not in {"category"} and not c.startswith("delta_")]
+    q_delta_col = next((c for c in q_cat.columns if c.startswith("delta_")), None)
     lines.append("\nBy category:")
     for _, row in q_cat.iterrows():
-        g = row.get("gemini", float("nan"))
-        c = row.get("chatgpt", float("nan"))
-        d = row.get("delta_gemini_minus_chatgpt", float("nan"))
-        lines.append(
-            f"  {row['category']:12s}: Gemini {g:.1f}% | ChatGPT {c:.1f}% | delta {d:+.1f}%"
+        scores_str = " | ".join(
+            f"{provider_label(p)} {row.get(p, float('nan')):.1f}%" for p in q_prov_cols
         )
+        d_str = (
+            f" | delta {row[q_delta_col]:+.1f}%"
+            if q_delta_col and not pd.isna(row.get(q_delta_col))
+            else ""
+        )
+        lines.append(f"  {row['category']:12s}: {scores_str}{d_str}")
 
     # -------------------------------------------------------------------
     # 4. Agreement: human vs VLM
@@ -311,7 +339,7 @@ def main() -> None:
         "HUMAN vs VLM AGREEMENT  (decisive votes only)",
         "=" * 60,
     ]
-    if len(decisive) > 0:
+    if len(decisive) > 0 and "faith_agree" in decisive.columns:
         fa = decisive["faith_agree"].mean() * 100
         qa = decisive["qual_agree"].mean()  * 100
         lines += [

@@ -36,7 +36,14 @@ from qwen_vl_utils import process_vision_info
 # Constants
 # ---------------------------------------------------------------------------
 JUDGE_MODEL = "Qwen/Qwen2-VL-2B-Instruct"
-PROVIDERS = ("gemini", "chatgpt")
+
+
+def discover_providers(run_dir: Path) -> list[str]:
+    """Return provider names found under run_dir/images/ (alphabetically sorted)."""
+    images_dir = run_dir / "images"
+    if not images_dir.exists():
+        return []
+    return sorted(p.name for p in images_dir.iterdir() if p.is_dir())
 
 SYSTEM_PROMPT = (
     "You are a strict image evaluation judge. "
@@ -282,7 +289,7 @@ def main() -> None:
 
     # Collect work items
     tasks: List[Tuple[str, str, int, Path]] = []
-    for provider in PROVIDERS:
+    for provider in discover_providers(run_path):
         img_dir = run_path / "images" / provider
         if not img_dir.exists():
             print(f"[WARN] Missing dir: {img_dir.as_posix()}")

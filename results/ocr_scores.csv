@@ -1,0 +1,61 @@
+model,prompt_id,sample_id,image_path,ocr_text,targets,ocr_score_avg,ocr_score_min,ocr_found_all,ocr_found_count,ocr_target_count,target_1_text,target_1_score,target_1_found,target_2_text,target_2_score,target_2_found
+gemini,typ_001,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_001__s1.png,MIDNIGHT RAMEN OPEN 10 PM- 3 AM I) ‘A ©,MIDNIGHT RAMEN | Open 10 PM – 3 AM,97.05882352941177,94.11764705882352,True,2,2,MIDNIGHT RAMEN,100.0,True,Open 10 PM – 3 AM,94.11764705882352,True
+gemini,typ_001,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_001__s2.png,MIDNIGHT RAMEN OPEN 10 PM - 3 AM,MIDNIGHT RAMEN | Open 10 PM – 3 AM,100.0,100.0,True,2,2,MIDNIGHT RAMEN,100.0,True,Open 10 PM – 3 AM,100.0,True
+gemini,typ_001,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_001__s3.png,MIDNIGHT RAMEN OPEN 10 PM - 3 AM,MIDNIGHT RAMEN | Open 10 PM – 3 AM,100.0,100.0,True,2,2,MIDNIGHT RAMEN,100.0,True,Open 10 PM – 3 AM,100.0,True
+gemini,typ_002,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_002__s1.png,% ES IE DRIP COFFEE \,DRIP COFFEE | $3.50,50.0,0.0,False,1,2,DRIP COFFEE,100.0,True,$3.50,0.0,False
+gemini,typ_002,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_002__s2.png,DRIP COFFEE $3.50,DRIP COFFEE | $3.50,100.0,100.0,True,2,2,DRIP COFFEE,100.0,True,$3.50,100.0,True
+gemini,typ_002,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_002__s3.png,DRIP COFFEE |},DRIP COFFEE | $3.50,50.0,0.0,False,1,2,DRIP COFFEE,100.0,True,$3.50,0.0,False
+gemini,typ_003,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_003__s1.png,CAUTION: HOT SURFACE,CAUTION: HOT SURFACE,100.0,100.0,True,1,1,CAUTION: HOT SURFACE,100.0,True,,,
+gemini,typ_003,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_003__s2.png,CAUTION: HOT SURFACE,CAUTION: HOT SURFACE,100.0,100.0,True,1,1,CAUTION: HOT SURFACE,100.0,True,,,
+gemini,typ_003,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_003__s3.png,CAUTION: HOT SURFACE,CAUTION: HOT SURFACE,100.0,100.0,True,1,1,CAUTION: HOT SURFACE,100.0,True,,,
+gemini,typ_004,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_004__s1.png,NEON CITY A NIGHT TO REMEMBE WS ».,NEON CITY | A NIGHT TO REMEMBER,97.36842105263159,94.73684210526316,True,2,2,NEON CITY,100.0,True,A NIGHT TO REMEMBER,94.73684210526316,True
+gemini,typ_004,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_004__s2.png,A NIGHT TO REMEMBER,NEON CITY | A NIGHT TO REMEMBER,68.75,37.5,False,1,2,NEON CITY,37.5,False,A NIGHT TO REMEMBER,100.0,True
+gemini,typ_004,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_004__s3.png,,NEON CITY | A NIGHT TO REMEMBER,0.0,0.0,False,0,2,NEON CITY,0.0,False,A NIGHT TO REMEMBER,0.0,False
+gemini,typ_005,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_005__s1.png,AURORA SOAP WITH LAVENDER,AURORA SOAP | LAVENDER,100.0,100.0,True,2,2,AURORA SOAP,100.0,True,LAVENDER,100.0,True
+gemini,typ_005,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_005__s2.png,- -~ AURORA SOAP LAVENDER : AE,AURORA SOAP | LAVENDER,100.0,100.0,True,2,2,AURORA SOAP,100.0,True,LAVENDER,100.0,True
+gemini,typ_005,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_005__s3.png,AURORA SOAP LAVENDER,AURORA SOAP | LAVENDER,100.0,100.0,True,2,2,AURORA SOAP,100.0,True,LAVENDER,100.0,True
+gemini,typ_006,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_006__s1.png,,EXIT,0.0,0.0,False,0,1,EXIT,0.0,False,,,
+gemini,typ_006,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_006__s2.png,,EXIT,0.0,0.0,False,0,1,EXIT,0.0,False,,,
+gemini,typ_006,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_006__s3.png,,EXIT,0.0,0.0,False,0,1,EXIT,0.0,False,,,
+gemini,typ_007,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_007__s1.png,EWT O < FRI 8 PM,TECH NIGHT | FRI 8 PM,65.38461538461539,30.76923076923077,False,1,2,TECH NIGHT,30.76923076923077,False,FRI 8 PM,100.0,True
+gemini,typ_007,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_007__s2.png,,TECH NIGHT | FRI 8 PM,0.0,0.0,False,0,2,TECH NIGHT,0.0,False,FRI 8 PM,0.0,False
+gemini,typ_007,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_007__s3.png,NIGHT FRI 8 PM THE INNOVATION HUB | WWW.TECHNIGHT.COM RF) [Y),TECH NIGHT | FRI 8 PM,95.0,90.0,True,2,2,TECH NIGHT,90.0,True,FRI 8 PM,100.0,True
+gemini,typ_008,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_008__s1.png,TODAY'S SPECIAL $9.99,TODAY'S SPECIAL | $9.99,100.0,100.0,True,2,2,TODAY'S SPECIAL,100.0,True,$9.99,100.0,True
+gemini,typ_008,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_008__s2.png,TODAY'S SPECIAL $9.99,TODAY'S SPECIAL | $9.99,100.0,100.0,True,2,2,TODAY'S SPECIAL,100.0,True,$9.99,100.0,True
+gemini,typ_008,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_008__s3.png,TODAY'S SPECIAL $9.99,TODAY'S SPECIAL | $9.99,100.0,100.0,True,2,2,TODAY'S SPECIAL,100.0,True,$9.99,100.0,True
+gemini,typ_009,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_009__s1.png,,NO PARKING | TOW AWAY ZONE,0.0,0.0,False,0,2,NO PARKING,0.0,False,TOW AWAY ZONE,0.0,False
+gemini,typ_009,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_009__s2.png,NO PARKING TOW AWAY ZONE,NO PARKING | TOW AWAY ZONE,100.0,100.0,True,2,2,NO PARKING,100.0,True,TOW AWAY ZONE,100.0,True
+gemini,typ_009,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_009__s3.png,,NO PARKING | TOW AWAY ZONE,0.0,0.0,False,0,2,NO PARKING,0.0,False,TOW AWAY ZONE,0.0,False
+gemini,typ_010,1,runs\2026-02-12_core40_k3_1024\images\gemini\typ_010__s1.png,OPEN LATE UNTIL 2 AM,OPEN LATE | UNTIL 2 AM,100.0,100.0,True,2,2,OPEN LATE,100.0,True,UNTIL 2 AM,100.0,True
+gemini,typ_010,2,runs\2026-02-12_core40_k3_1024\images\gemini\typ_010__s2.png,,OPEN LATE | UNTIL 2 AM,0.0,0.0,False,0,2,OPEN LATE,0.0,False,UNTIL 2 AM,0.0,False
+gemini,typ_010,3,runs\2026-02-12_core40_k3_1024\images\gemini\typ_010__s3.png,OPEN LATE UNTIL 2 AM,OPEN LATE | UNTIL 2 AM,100.0,100.0,True,2,2,OPEN LATE,100.0,True,UNTIL 2 AM,100.0,True
+chatgpt,typ_001,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_001__s1.png,VWIDNIUNI RAMEN TE ES AD EE ODEN 10 DM-2 AM,MIDNIGHT RAMEN | Open 10 PM – 3 AM,73.21428571428572,71.42857142857143,False,0,2,MIDNIGHT RAMEN,71.42857142857143,False,Open 10 PM – 3 AM,75.0,False
+chatgpt,typ_001,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_001__s2.png,- OPEN 10 PM- 3AM,MIDNIGHT RAMEN | Open 10 PM – 3 AM,66.875,40.0,False,1,2,MIDNIGHT RAMEN,40.0,False,Open 10 PM – 3 AM,93.75,True
+chatgpt,typ_001,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_001__s3.png,VMIDNIGH | RAMEN (AN CEE OPEN 10 PM-3 AM,MIDNIGHT RAMEN | Open 10 PM – 3 AM,89.73214285714286,85.71428571428572,True,2,2,MIDNIGHT RAMEN,85.71428571428572,True,Open 10 PM – 3 AM,93.75,True
+chatgpt,typ_002,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_002__s1.png,COFFEE,DRIP COFFEE | $3.50,50.0,0.0,False,1,2,DRIP COFFEE,100.0,True,$3.50,0.0,False
+chatgpt,typ_002,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_002__s2.png,,DRIP COFFEE | $3.50,0.0,0.0,False,0,2,DRIP COFFEE,0.0,False,$3.50,0.0,False
+chatgpt,typ_002,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_002__s3.png,,DRIP COFFEE | $3.50,0.0,0.0,False,0,2,DRIP COFFEE,0.0,False,$3.50,0.0,False
+chatgpt,typ_003,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_003__s1.png,,CAUTION: HOT SURFACE,0.0,0.0,False,0,1,CAUTION: HOT SURFACE,0.0,False,,,
+chatgpt,typ_003,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_003__s2.png,CAUTION: HOT SURFACE,CAUTION: HOT SURFACE,100.0,100.0,True,1,1,CAUTION: HOT SURFACE,100.0,True,,,
+chatgpt,typ_003,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_003__s3.png,CAUTION: SURFACE,CAUTION: HOT SURFACE,75.0,75.0,False,0,1,CAUTION: HOT SURFACE,75.0,False,,,
+chatgpt,typ_004,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_004__s1.png,NEOQIN @ » S=| A NIGHT TO REMEMBER E Q :,NEON CITY | A NIGHT TO REMEMBER,81.25,62.5,False,1,2,NEON CITY,62.5,False,A NIGHT TO REMEMBER,100.0,True
+chatgpt,typ_004,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_004__s2.png,,NEON CITY | A NIGHT TO REMEMBER,0.0,0.0,False,0,2,NEON CITY,0.0,False,A NIGHT TO REMEMBER,0.0,False
+chatgpt,typ_004,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_004__s3.png,= GMAN ME WIEN AR. 7-7-7 (=E ---,NEON CITY | A NIGHT TO REMEMBER,41.666666666666664,38.888888888888886,False,0,2,NEON CITY,44.44444444444444,False,A NIGHT TO REMEMBER,38.888888888888886,False
+chatgpt,typ_005,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_005__s1.png,AURORA SOAP LAVENDER,AURORA SOAP | LAVENDER,100.0,100.0,True,2,2,AURORA SOAP,100.0,True,LAVENDER,100.0,True
+chatgpt,typ_005,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_005__s2.png,,AURORA SOAP | LAVENDER,0.0,0.0,False,0,2,AURORA SOAP,0.0,False,LAVENDER,0.0,False
+chatgpt,typ_005,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_005__s3.png,AURORA SOAP LAVENDER,AURORA SOAP | LAVENDER,100.0,100.0,True,2,2,AURORA SOAP,100.0,True,LAVENDER,100.0,True
+chatgpt,typ_006,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_006__s1.png,,EXIT,0.0,0.0,False,0,1,EXIT,0.0,False,,,
+chatgpt,typ_006,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_006__s2.png,,EXIT,0.0,0.0,False,0,1,EXIT,0.0,False,,,
+chatgpt,typ_006,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_006__s3.png,,EXIT,0.0,0.0,False,0,1,EXIT,0.0,False,,,
+chatgpt,typ_007,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_007__s1.png,TECH NIGHT FRI & PM,TECH NIGHT | FRI 8 PM,93.75,87.5,True,2,2,TECH NIGHT,100.0,True,FRI 8 PM,87.5,True
+chatgpt,typ_007,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_007__s2.png,TECH NIGHT FRI 8 PM,TECH NIGHT | FRI 8 PM,100.0,100.0,True,2,2,TECH NIGHT,100.0,True,FRI 8 PM,100.0,True
+chatgpt,typ_007,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_007__s3.png,TECH NIGHT FRI 8 PM,TECH NIGHT | FRI 8 PM,100.0,100.0,True,2,2,TECH NIGHT,100.0,True,FRI 8 PM,100.0,True
+chatgpt,typ_008,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_008__s1.png,TODAY'S SPECIAL $999,TODAY'S SPECIAL | $9.99,94.44444444444444,88.88888888888889,True,2,2,TODAY'S SPECIAL,100.0,True,$9.99,88.88888888888889,True
+chatgpt,typ_008,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_008__s2.png,"TODAY'S SPECIAL $9,99",TODAY'S SPECIAL | $9.99,90.0,80.0,False,1,2,TODAY'S SPECIAL,100.0,True,$9.99,80.0,False
+chatgpt,typ_008,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_008__s3.png,,TODAY'S SPECIAL | $9.99,0.0,0.0,False,0,2,TODAY'S SPECIAL,0.0,False,$9.99,0.0,False
+chatgpt,typ_009,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_009__s1.png,NO PARKING TOW AWAY ZONE,NO PARKING | TOW AWAY ZONE,100.0,100.0,True,2,2,NO PARKING,100.0,True,TOW AWAY ZONE,100.0,True
+chatgpt,typ_009,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_009__s2.png,,NO PARKING | TOW AWAY ZONE,0.0,0.0,False,0,2,NO PARKING,0.0,False,TOW AWAY ZONE,0.0,False
+chatgpt,typ_009,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_009__s3.png,TOW AWAY ZONE,NO PARKING | TOW AWAY ZONE,70.0,40.0,False,1,2,NO PARKING,40.0,False,TOW AWAY ZONE,100.0,True
+chatgpt,typ_010,1,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_010__s1.png,OPEN LATE UNTIL 2AM,OPEN LATE | UNTIL 2 AM,97.36842105263159,94.73684210526316,True,2,2,OPEN LATE,100.0,True,UNTIL 2 AM,94.73684210526316,True
+chatgpt,typ_010,2,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_010__s2.png,,OPEN LATE | UNTIL 2 AM,0.0,0.0,False,0,2,OPEN LATE,0.0,False,UNTIL 2 AM,0.0,False
+chatgpt,typ_010,3,runs\2026-02-12_core40_k3_1024\images\chatgpt\typ_010__s3.png,,OPEN LATE | UNTIL 2 AM,0.0,0.0,False,0,2,OPEN LATE,0.0,False,UNTIL 2 AM,0.0,False

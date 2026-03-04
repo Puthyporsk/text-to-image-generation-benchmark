@@ -1,6 +1,9 @@
 # eval/ocr_eval.py
 from __future__ import annotations
 
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
 import argparse
 import json
 import re
@@ -65,7 +68,9 @@ def main(run_dir: str, prompts_file: str, out_csv: str, threshold: int):
 
     rows: List[Dict[str, Any]] = []
 
-    for model in ["gemini", "chatgpt"]:
+    images_root = run_path / "images"
+    providers = sorted(p.name for p in images_root.iterdir() if p.is_dir()) if images_root.exists() else []
+    for model in providers:
         for img_path in iter_images(run_path, model):
             try:
                 prompt_id, sample_id = parse_filename(img_path)

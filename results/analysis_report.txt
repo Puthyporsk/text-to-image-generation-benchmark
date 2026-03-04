@@ -2,19 +2,19 @@
 HUMAN RANKINGS SUMMARY
 ============================================================
 Total votes  : 120
-  Gemini wins: 27  (22.5%)
-  ChatGPT wins:23  (19.2%)
+  GPT-Image-1 Mini wins: 23  (19.2%)
+  Gemini (Imagen 4) wins: 27  (22.5%)
   Tie          63  (52.5%)
   Both fail:   7  (5.8%)
 Decisive (excl. tie/neither): 50
-  Gemini:  27/50 = 54.0%
-  ChatGPT: 23/50 = 46.0%
+  GPT-Image-1 Mini: 23/50 = 46.0%
+  Gemini (Imagen 4): 27/50 = 54.0%
 
 By category:
-  binding     : G=4 C=4 Tie=22 Neither=0  -> decisive: Gemini 50% vs ChatGPT 50%
-  count       : G=3 C=4 Tie=18 Neither=5  -> decisive: Gemini 43% vs ChatGPT 57%
-  spatial     : G=1 C=8 Tie=19 Neither=2  -> decisive: Gemini 11% vs ChatGPT 89%
-  typography  : G=19 C=7 Tie=4 Neither=0  -> decisive: Gemini 73% vs ChatGPT 27%
+  binding     : C=4  G=4  Tie=22 Neither=0  -> decisive: GPT-Image-1 Mini 50% vs Gemini (Imagen 4) 50%
+  count       : C=4  G=3  Tie=18 Neither=5  -> decisive: GPT-Image-1 Mini 57% vs Gemini (Imagen 4) 43%
+  spatial     : C=8  G=1  Tie=19 Neither=2  -> decisive: GPT-Image-1 Mini 89% vs Gemini (Imagen 4) 11%
+  typography  : C=7  G=19  Tie=4 Neither=0  -> decisive: GPT-Image-1 Mini 27% vs Gemini (Imagen 4) 73%
 
 ============================================================
 VLM FAITHFULNESS SCORES
@@ -23,10 +23,10 @@ VLM FAITHFULNESS SCORES
   gemini    : 96.0%  (+/-12.7%,  n=120)
 
 By category:
-  binding     : Gemini 94.0% | ChatGPT 90.0% | delta +4.0%
-  count       : Gemini 100.0% | ChatGPT 100.0% | delta +0.0%
-  spatial     : Gemini 100.0% | ChatGPT 100.0% | delta +0.0%
-  typography  : Gemini 90.0% | ChatGPT 90.0% | delta +0.0%
+  binding     : GPT-Image-1 Mini 90.0% | Gemini (Imagen 4) 94.0% | delta -4.0%
+  count       : GPT-Image-1 Mini 100.0% | Gemini (Imagen 4) 100.0% | delta +0.0%
+  spatial     : GPT-Image-1 Mini 100.0% | Gemini (Imagen 4) 100.0% | delta +0.0%
+  typography  : GPT-Image-1 Mini 90.0% | Gemini (Imagen 4) 90.0% | delta +0.0%
 
 ============================================================
 VLM QUALITY SCORES
@@ -35,10 +35,10 @@ VLM QUALITY SCORES
   gemini    : 98.7%  (+/-5.0%,  n=120)
 
 By category:
-  binding     : Gemini 99.3% | ChatGPT 100.0% | delta -0.7%
-  count       : Gemini 96.7% | ChatGPT 99.3% | delta -2.6%
-  spatial     : Gemini 98.7% | ChatGPT 98.7% | delta +0.0%
-  typography  : Gemini 100.0% | ChatGPT 100.0% | delta +0.0%
+  binding     : GPT-Image-1 Mini 100.0% | Gemini (Imagen 4) 99.3% | delta +0.7%
+  count       : GPT-Image-1 Mini 99.3% | Gemini (Imagen 4) 96.7% | delta +2.6%
+  spatial     : GPT-Image-1 Mini 98.7% | Gemini (Imagen 4) 98.7% | delta +0.0%
+  typography  : GPT-Image-1 Mini 100.0% | Gemini (Imagen 4) 100.0% | delta +0.0%
 
 ============================================================
 HUMAN vs VLM AGREEMENT  (decisive votes only)

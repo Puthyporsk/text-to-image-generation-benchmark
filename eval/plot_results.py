@@ -24,25 +24,29 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 import pandas as pd
 import numpy as np
+
+from providers.registry import label as provider_label
 
 RANKINGS_CSV = Path("results/human_rankings.csv")
 FAITH_CSV    = Path("results/faithfulness_scores.csv")
 QUALITY_CSV  = Path("results/quality_scores.csv")
 PLOTS_DIR    = Path("results/plots")
 
-GEMINI_COLOR  = "#4285F4"   # Google blue
-CHATGPT_COLOR = "#10A37F"   # OpenAI green
-TIE_COLOR     = "#9E9E9E"
-NEITHER_COLOR = "#E53935"
+# Color palette assigned by sorted provider index; special colors for tie/neither
+PROVIDER_PALETTE = ["#4285F4", "#10A37F", "#FF5722", "#9C27B0"]
+TIE_COLOR        = "#9E9E9E"
+NEITHER_COLOR    = "#E53935"
 
 CATEGORIES = ["binding", "count", "spatial", "typography"]
 CAT_LABELS  = {"binding": "Binding", "count": "Count",
                "spatial": "Spatial", "typography": "Typography"}
 
-PROVIDER_LABELS = {"gemini": "Gemini (Imagen)", "chatgpt": "ChatGPT (GPT-Image-1-Mini)"}
+
+def provider_colors(providers: list[str]) -> dict[str, str]:
+    """Map provider names to palette colors (consistent by sorted index)."""
+    return {p: PROVIDER_PALETTE[i % len(PROVIDER_PALETTE)] for i, p in enumerate(sorted(providers))}
 
 
 # ---------------------------------------------------------------------------
@@ -70,14 +74,16 @@ def save(fig: plt.Figure, name: str) -> None:
 # ---------------------------------------------------------------------------
 
 def plot_human_overall(h: pd.DataFrame) -> plt.Figure:
-    n = len(h)
-    counts = {
-        "Gemini wins":  (h["winner"] == "gemini").sum(),
-        "ChatGPT wins": (h["winner"] == "chatgpt").sum(),
-        "Tie":          (h["winner"] == "tie").sum(),
-        "Both fail":    (h["winner"] == "neither").sum(),
-    }
-    colors = [GEMINI_COLOR, CHATGPT_COLOR, TIE_COLOR, NEITHER_COLOR]
+    n          = len(h)
+    _providers = sorted(w for w in h["winner"].unique() if w not in {"tie", "neither"})
+    _pcolors   = provider_colors(_providers)
+
+    counts: dict = {}
+    for p in _providers:
+        counts[f"{provider_label(p)} wins"] = (h["winner"] == p).sum()
+    counts["Tie"]       = (h["winner"] == "tie").sum()
+    counts["Both fail"] = (h["winner"] == "neither").sum()
+    colors = [_pcolors[p] for p in _providers] + [TIE_COLOR, NEITHER_COLOR]
 
     fig, ax = plt.subplots(figsize=(7, 4))
     left = 0
@@ -104,38 +110,32 @@ def plot_human_overall(h: pd.DataFrame) -> plt.Figure:
 # ---------------------------------------------------------------------------
 
 def plot_human_by_category(h: pd.DataFrame) -> plt.Figure:
-    cats = CATEGORIES
-    gemini_rates, chatgpt_rates, n_decisive = [], [], []
+    cats       = CATEGORIES
+    _providers = sorted(w for w in h["winner"].unique() if w not in {"tie", "neither"})
+    _pcolors   = provider_colors(_providers)
+    rates      = {p: [] for p in _providers}
+    n_decisive = []
 
     for cat in cats:
         sub = h[h["category"] == cat]
-        dec = sub[sub["winner"].isin(["gemini", "chatgpt"])]
+        dec = sub[sub["winner"].isin(_providers)]
         nd  = len(dec)
         n_decisive.append(nd)
-        if nd > 0:
-            gemini_rates.append(  (dec["winner"] == "gemini").sum()  / nd * 100)
-            chatgpt_rates.append( (dec["winner"] == "chatgpt").sum() / nd * 100)
-        else:
-            gemini_rates.append(0)
-            chatgpt_rates.append(0)
+        for p in _providers:
+            rates[p].append((dec["winner"] == p).sum() / nd * 100 if nd > 0 else 0)
 
     x   = np.arange(len(cats))
-    w   = 0.35
+    w   = 0.8 / max(len(_providers), 1)
     fig, ax = plt.subplots(figsize=(8, 5))
 
-    bars_g = ax.bar(x - w/2, gemini_rates,  w, label="Gemini (Imagen)",          color=GEMINI_COLOR,  alpha=0.9)
-    bars_c = ax.bar(x + w/2, chatgpt_rates, w, label="ChatGPT (GPT-Image-1-Mini)", color=CHATGPT_COLOR, alpha=0.9)
-
-    for bar in bars_g:
-        h_ = bar.get_height()
-        if h_ > 0:
-            ax.text(bar.get_x() + bar.get_width()/2, h_ + 1, f"{h_:.0f}%",
-                    ha="center", va="bottom", fontsize=9)
-    for bar in bars_c:
-        h_ = bar.get_height()
-        if h_ > 0:
-            ax.text(bar.get_x() + bar.get_width()/2, h_ + 1, f"{h_:.0f}%",
-                    ha="center", va="bottom", fontsize=9)
+    for i, p in enumerate(_providers):
+        offset = (i - (len(_providers) - 1) / 2) * w
+        bars = ax.bar(x + offset, rates[p], w, label=provider_label(p), color=_pcolors[p], alpha=0.9)
+        for bar in bars:
+            h_ = bar.get_height()
+            if h_ > 0:
+                ax.text(bar.get_x() + bar.get_width()/2, h_ + 1, f"{h_:.0f}%",
+                        ha="center", va="bottom", fontsize=9)
 
     ax.axhline(50, color="gray", linestyle="--", linewidth=0.8, alpha=0.6)
     ax.set_xticks(x)
@@ -158,22 +158,27 @@ def plot_human_by_category(h: pd.DataFrame) -> plt.Figure:
 # ---------------------------------------------------------------------------
 
 def plot_faithfulness_by_cat(f: pd.DataFrame) -> plt.Figure:
-    cats = CATEGORIES
-    gem_scores, gpt_scores = [], []
+    cats       = CATEGORIES
+    _providers = sorted(f["provider"].unique())
+    _pcolors   = provider_colors(_providers)
+    scores     = {p: [] for p in _providers}
 
     for cat in cats:
         sub = f[f["category"] == cat]
-        gem_scores.append(sub[sub["provider"] == "gemini" ]["faithfulness_score"].mean() * 100)
-        gpt_scores.append(sub[sub["provider"] == "chatgpt"]["faithfulness_score"].mean() * 100)
+        for p in _providers:
+            scores[p].append(sub[sub["provider"] == p]["faithfulness_score"].mean() * 100)
 
-    x = np.arange(len(cats))
-    w = 0.35
+    x  = np.arange(len(cats))
+    w  = 0.8 / max(len(_providers), 1)
     fig, ax = plt.subplots(figsize=(8, 5))
 
-    bars_g = ax.bar(x - w/2, gem_scores, w, label="Gemini (Imagen)",          color=GEMINI_COLOR,  alpha=0.9)
-    bars_c = ax.bar(x + w/2, gpt_scores, w, label="ChatGPT (GPT-Image-1-Mini)", color=CHATGPT_COLOR, alpha=0.9)
+    all_bars = []
+    for i, p in enumerate(_providers):
+        offset = (i - (len(_providers) - 1) / 2) * w
+        bars = ax.bar(x + offset, scores[p], w, label=provider_label(p), color=_pcolors[p], alpha=0.9)
+        all_bars.extend(bars)
 
-    for bar in bars_g + bars_c:
+    for bar in all_bars:
         h_ = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2, min(h_ + 0.5, 99),
                 f"{h_:.1f}%", ha="center", va="bottom", fontsize=9)
@@ -196,19 +201,23 @@ def plot_faithfulness_by_cat(f: pd.DataFrame) -> plt.Figure:
 
 def plot_summary(h: pd.DataFrame, f: pd.DataFrame) -> plt.Figure:
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
-    fig.suptitle("Text-to-Image Benchmark: Gemini vs ChatGPT", fontsize=15, fontweight="bold", y=1.01)
+    fig.suptitle("Text-to-Image Benchmark Summary", fontsize=15, fontweight="bold", y=1.01)
+
+    _providers_h = sorted(w for w in h["winner"].unique() if w not in {"tie", "neither"})
+    _pcolors_h   = provider_colors(_providers_h)
+    _providers_f = sorted(f["provider"].unique())
+    _pcolors_f   = provider_colors(_providers_f)
+    cats = CATEGORIES
 
     # Panel A – overall vote distribution
     ax = axes[0, 0]
-    n = len(h)
-    labels = ["Gemini\nwins", "ChatGPT\nwins", "Tie", "Both\nfail"]
-    vals   = [
-        (h["winner"] == "gemini").sum(),
-        (h["winner"] == "chatgpt").sum(),
+    n      = len(h)
+    labels = [f"{provider_label(p)}\nwins" for p in _providers_h] + ["Tie", "Both\nfail"]
+    vals   = [(h["winner"] == p).sum() for p in _providers_h] + [
         (h["winner"] == "tie").sum(),
         (h["winner"] == "neither").sum(),
     ]
-    colors = [GEMINI_COLOR, CHATGPT_COLOR, TIE_COLOR, NEITHER_COLOR]
+    colors = [_pcolors_h[p] for p in _providers_h] + [TIE_COLOR, NEITHER_COLOR]
     bars = ax.bar(labels, vals, color=colors, alpha=0.9, width=0.5)
     for bar, val in zip(bars, vals):
         ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.8,
@@ -220,22 +229,19 @@ def plot_summary(h: pd.DataFrame, f: pd.DataFrame) -> plt.Figure:
 
     # Panel B – decisive win rate by category
     ax = axes[0, 1]
-    cats = CATEGORIES
-    gemini_rates, chatgpt_rates = [], []
+    rates_b = {p: [] for p in _providers_h}
     for cat in cats:
         sub = h[h["category"] == cat]
-        dec = sub[sub["winner"].isin(["gemini", "chatgpt"])]
+        dec = sub[sub["winner"].isin(_providers_h)]
         nd  = len(dec)
-        if nd > 0:
-            gemini_rates.append( (dec["winner"] == "gemini").sum()  / nd * 100)
-            chatgpt_rates.append((dec["winner"] == "chatgpt").sum() / nd * 100)
-        else:
-            gemini_rates.append(0); chatgpt_rates.append(0)
+        for p in _providers_h:
+            rates_b[p].append((dec["winner"] == p).sum() / nd * 100 if nd > 0 else 0)
 
     x = np.arange(len(cats))
-    w = 0.35
-    ax.bar(x - w/2, gemini_rates,  w, color=GEMINI_COLOR,  alpha=0.9, label="Gemini")
-    ax.bar(x + w/2, chatgpt_rates, w, color=CHATGPT_COLOR, alpha=0.9, label="ChatGPT")
+    w = 0.8 / max(len(_providers_h), 1)
+    for i, p in enumerate(_providers_h):
+        offset = (i - (len(_providers_h) - 1) / 2) * w
+        ax.bar(x + offset, rates_b[p], w, color=_pcolors_h[p], alpha=0.9, label=provider_label(p))
     ax.axhline(50, color="gray", linestyle="--", linewidth=0.8, alpha=0.6)
     ax.set_xticks(x)
     ax.set_xticklabels([CAT_LABELS[c] for c in cats], fontsize=9)
@@ -245,15 +251,17 @@ def plot_summary(h: pd.DataFrame, f: pd.DataFrame) -> plt.Figure:
     ax.legend(fontsize=9)
     ax.spines[["top", "right"]].set_visible(False)
 
-    # Panel C – faithfulness by category
+    # Panel C – faithfulness by category (reuses x from Panel B)
     ax = axes[1, 0]
-    gem_f, gpt_f = [], []
+    scores_c = {p: [] for p in _providers_f}
     for cat in cats:
         sub = f[f["category"] == cat]
-        gem_f.append(sub[sub["provider"] == "gemini" ]["faithfulness_score"].mean() * 100)
-        gpt_f.append(sub[sub["provider"] == "chatgpt"]["faithfulness_score"].mean() * 100)
-    ax.bar(x - w/2, gem_f, w, color=GEMINI_COLOR,  alpha=0.9, label="Gemini")
-    ax.bar(x + w/2, gpt_f, w, color=CHATGPT_COLOR, alpha=0.9, label="ChatGPT")
+        for p in _providers_f:
+            scores_c[p].append(sub[sub["provider"] == p]["faithfulness_score"].mean() * 100)
+    w_c = 0.8 / max(len(_providers_f), 1)
+    for i, p in enumerate(_providers_f):
+        offset = (i - (len(_providers_f) - 1) / 2) * w_c
+        ax.bar(x + offset, scores_c[p], w_c, color=_pcolors_f[p], alpha=0.9, label=provider_label(p))
     ax.set_xticks(x)
     ax.set_xticklabels([CAT_LABELS[c] for c in cats], fontsize=9)
     ax.set_ylabel("Mean faithfulness (%)")

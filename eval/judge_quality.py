@@ -65,7 +65,14 @@ RUBRIC: List[Tuple[str, str]] = [
 RUBRIC_DIMS = [dim for dim, _ in RUBRIC]
 
 JUDGE_MODEL = "Qwen/Qwen2-VL-2B-Instruct"
-PROVIDERS = ("gemini", "chatgpt")
+
+
+def discover_providers(run_dir: Path) -> list[str]:
+    """Return provider names found under run_dir/images/ (alphabetically sorted)."""
+    images_dir = run_dir / "images"
+    if not images_dir.exists():
+        return []
+    return sorted(p.name for p in images_dir.iterdir() if p.is_dir())
 
 SYSTEM_PROMPT = (
     "You are a professional image quality critic. "
@@ -266,7 +273,7 @@ def main() -> None:
         print(f"[RESUME] Skipping {len(done_keys)} already-evaluated images")
 
     tasks: List[Tuple[str, str, int, Path]] = []
-    for provider in PROVIDERS:
+    for provider in discover_providers(run_path):
         img_dir = run_path / "images" / provider
         if not img_dir.exists():
             print(f"[WARN] Missing dir: {img_dir.as_posix()}")

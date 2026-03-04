@@ -32,6 +32,10 @@ from PIL import Image
 import streamlit as st
 from dotenv import load_dotenv
 
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from providers.registry import registered_names, label as provider_label
+
 load_dotenv()
 
 # ---------------------------------------------------------------------------
@@ -69,9 +73,6 @@ CLOUDINARY_CLOUD_NAME = _cfg("CLOUDINARY_CLOUD_NAME")
 USE_SHEETS     = bool(GOOGLE_SHEET_ID and (GOOGLE_SA_JSON or _has_gcp_secret()))
 USE_GCS        = bool(GCS_BUCKET)
 USE_CLOUDINARY = bool(CLOUDINARY_CLOUD_NAME)
-
-PROVIDERS = ("gemini", "chatgpt")
-PROVIDER_LABELS = {"gemini": "Gemini (Imagen)", "chatgpt": "ChatGPT (GPT Image 1 Mini)"}
 
 RANKINGS_FIELDS = [
     "timestamp", "run_dir", "prompt_id", "category", "sample",
@@ -307,6 +308,20 @@ def quality_label(df: Optional[pd.DataFrame], provider: str, pid: str, sample: i
 
 
 # ---------------------------------------------------------------------------
+# Provider discovery
+# ---------------------------------------------------------------------------
+
+def discover_providers(run_dir: str) -> list[str]:
+    """Return providers found in run_dir/images/, falling back to the registry."""
+    img_dir = Path(run_dir) / "images"
+    if img_dir.is_dir():
+        found = sorted(p.name for p in img_dir.iterdir() if p.is_dir())
+        if found:
+            return found
+    return registered_names()
+
+
+# ---------------------------------------------------------------------------
 # Page setup
 # ---------------------------------------------------------------------------
 
@@ -334,6 +349,7 @@ with st.sidebar:
     st.title("⚙️ Settings")
 
     run_dir = st.text_input("Run directory", value="runs/2026-02-12_core40_k3_1024")
+    providers = discover_providers(run_dir)
     annotator = st.text_input("Your name", value="", placeholder="Enter your name")
     sample_k = st.number_input("Sample #", min_value=1, max_value=3, value=1, step=1)
 
@@ -394,7 +410,7 @@ if "local_voted" not in st.session_state:
 # between reruns while the user is looking at the same pair.
 blind_key = f"blind_{st.session_state['current_pid']}_{sample_k}"
 if blind_key not in st.session_state:
-    order = list(PROVIDERS)
+    order = list(providers)
     random.shuffle(order)
     st.session_state[blind_key] = order  # [left_model, right_model]
 
@@ -412,7 +428,7 @@ item = prompt_by_id[pid]
 # Reset blind order when prompt changes
 blind_key = f"blind_{pid}_{sample_k}"
 if blind_key not in st.session_state:
-    order = list(PROVIDERS)
+    order = list(providers)
     random.shuffle(order)
     st.session_state[blind_key] = order
 
@@ -445,8 +461,8 @@ with cols[1]:
 # Image columns
 # ---------------------------------------------------------------------------
 
-left_label = "Model A" if blind_mode else PROVIDER_LABELS[left_model]
-right_label = "Model B" if blind_mode else PROVIDER_LABELS[right_model]
+left_label = "Model A" if blind_mode else provider_label(left_model)
+right_label = "Model B" if blind_mode else provider_label(right_model)
 
 col_l, col_r = st.columns(2)
 
