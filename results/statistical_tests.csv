@@ -1,0 +1,11 @@
+provider,metric,scope,mean,ci_lo,ci_hi,n
+chatgpt,faithfulness,overall,98.99,97.31,100.0,120
+gemini,faithfulness,overall,97.38,94.71,99.38,120
+chatgpt,faithfulness,binding,100.0,100.0,100.0,30
+gemini,faithfulness,binding,100.0,100.0,100.0,30
+chatgpt,faithfulness,count,99.44,98.33,100.0,30
+gemini,faithfulness,count,100.0,100.0,100.0,30
+chatgpt,faithfulness,spatial,100.0,100.0,100.0,30
+gemini,faithfulness,spatial,100.0,100.0,100.0,30
+chatgpt,faithfulness,typography,96.5,90.33,100.0,30
+gemini,faithfulness,typography,89.5,80.0,97.33,30

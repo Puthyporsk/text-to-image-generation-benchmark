@@ -28,6 +28,12 @@ import pandas as pd
 import numpy as np
 
 from providers.registry import label as provider_label
+from eval.deep_analysis import (
+    expand_check_verdicts,
+    error_taxonomy,
+    sample_consistency,
+    bootstrap_ci,
+)
 
 RANKINGS_CSV = Path("results/human_rankings.csv")
 FAITH_CSV    = Path("results/faithfulness_scores.csv")
@@ -289,6 +295,202 @@ def plot_summary(h: pd.DataFrame, f: pd.DataFrame) -> plt.Figure:
 
 
 # ---------------------------------------------------------------------------
+# Extended plots (--extended flag)
+# ---------------------------------------------------------------------------
+
+def plot_error_heatmap(f: pd.DataFrame) -> plt.Figure:
+    """Heatmap: rows = prompt_ids (grouped by category), columns = models.
+    Cell color = faithfulness score."""
+    _providers = sorted(f["provider"].unique())
+    pivot = (
+        f.groupby(["prompt_id", "category", "provider"])["faithfulness_score"]
+        .mean()
+        .unstack("provider")
+        .reset_index()
+    )
+    pivot = pivot.sort_values(["category", "prompt_id"])
+
+    data = pivot[_providers].values
+    labels_y = [f"{r['prompt_id']}" for _, r in pivot.iterrows()]
+    cat_labels = pivot["category"].values
+
+    fig, ax = plt.subplots(figsize=(6, max(10, len(labels_y) * 0.3)))
+    im = ax.imshow(data, aspect="auto", cmap="RdYlGn", vmin=0, vmax=1)
+
+    ax.set_xticks(range(len(_providers)))
+    ax.set_xticklabels([provider_label(p) for p in _providers], fontsize=10)
+    ax.set_yticks(range(len(labels_y)))
+    ax.set_yticklabels(labels_y, fontsize=7)
+
+    # Add category separators
+    prev_cat = None
+    for i, cat in enumerate(cat_labels):
+        if cat != prev_cat and prev_cat is not None:
+            ax.axhline(i - 0.5, color="black", linewidth=1.5)
+        prev_cat = cat
+
+    # Annotate cells with scores
+    for i in range(data.shape[0]):
+        for j in range(data.shape[1]):
+            val = data[i, j]
+            color = "white" if val < 0.5 else "black"
+            ax.text(j, i, f"{val:.0%}", ha="center", va="center", fontsize=6, color=color)
+
+    fig.colorbar(im, ax=ax, label="Faithfulness Score", shrink=0.6)
+    ax.set_title("Faithfulness Score by Prompt and Model", fontsize=13, fontweight="bold")
+    fig.tight_layout()
+    return fig
+
+
+def plot_radar_by_category(h: pd.DataFrame) -> plt.Figure:
+    """Radar/spider chart: 4 category axes, one polygon per model."""
+    cats = CATEGORIES
+    _providers = sorted(w for w in h["winner"].unique() if w not in {"tie", "neither"})
+    _pcolors = provider_colors(_providers)
+
+    # Compute decisive win rates per category
+    rates = {}
+    for p in _providers:
+        p_rates = []
+        for cat in cats:
+            sub = h[(h["category"] == cat) & (h["winner"].isin(_providers))]
+            if len(sub) > 0:
+                p_rates.append((sub["winner"] == p).sum() / len(sub) * 100)
+            else:
+                p_rates.append(0)
+        rates[p] = p_rates
+
+    angles = np.linspace(0, 2 * np.pi, len(cats), endpoint=False).tolist()
+    angles += angles[:1]  # close the polygon
+
+    fig, ax = plt.subplots(figsize=(7, 7), subplot_kw=dict(polar=True))
+    for p in _providers:
+        values = rates[p] + rates[p][:1]
+        ax.plot(angles, values, "o-", label=provider_label(p), color=_pcolors[p], linewidth=2)
+        ax.fill(angles, values, alpha=0.15, color=_pcolors[p])
+
+    ax.set_xticks(angles[:-1])
+    ax.set_xticklabels([CAT_LABELS[c] for c in cats], fontsize=11)
+    ax.set_ylim(0, 100)
+    ax.set_yticks([25, 50, 75, 100])
+    ax.set_yticklabels(["25%", "50%", "75%", "100%"], fontsize=8)
+    ax.axhline(50, color="gray", linestyle="--", linewidth=0.5)
+    ax.set_title("Human Win Rate by Category", fontsize=13, fontweight="bold", pad=20)
+    ax.legend(loc="upper right", bbox_to_anchor=(1.3, 1.1), fontsize=10)
+    fig.tight_layout()
+    return fig
+
+
+def plot_quality_dimensions(q: pd.DataFrame) -> plt.Figure:
+    """Grouped bar chart: 5 quality dimensions per model with CI error bars."""
+    dims = ["subject_clarity", "composition", "technical", "aesthetic", "coherence"]
+    dim_labels = ["Subject\nClarity", "Composition", "Technical", "Aesthetic", "Coherence"]
+    _providers = sorted(q["provider"].unique())
+    _pcolors = provider_colors(_providers)
+
+    means = {p: [] for p in _providers}
+    ci_los = {p: [] for p in _providers}
+    ci_his = {p: [] for p in _providers}
+
+    for dim in dims:
+        if dim not in q.columns:
+            for p in _providers:
+                means[p].append(0)
+                ci_los[p].append(0)
+                ci_his[p].append(0)
+            continue
+        for p in _providers:
+            scores = q[q["provider"] == p][dim].values / 5.0 * 100  # normalize to %
+            m, lo, hi = bootstrap_ci(scores)
+            means[p].append(m)
+            ci_los[p].append(m - lo)
+            ci_his[p].append(hi - m)
+
+    x = np.arange(len(dims))
+    w = 0.8 / max(len(_providers), 1)
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    for i, p in enumerate(_providers):
+        offset = (i - (len(_providers) - 1) / 2) * w
+        ax.bar(
+            x + offset, means[p], w,
+            label=provider_label(p), color=_pcolors[p], alpha=0.9,
+            yerr=[ci_los[p], ci_his[p]], capsize=4,
+        )
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(dim_labels, fontsize=10)
+    ax.set_ylabel("Score (%)")
+    ax.set_ylim(70, 105)
+    ax.set_title("VLM Quality Scores by Dimension", fontsize=13, fontweight="bold")
+    ax.legend(fontsize=10)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    return fig
+
+
+def plot_consistency_strip(f: pd.DataFrame) -> plt.Figure:
+    """Strip plot: each dot is a prompt's faithfulness std across 3 samples."""
+    cons = sample_consistency(f)
+    df = cons["faithfulness_consistency"]
+
+    _providers = sorted(df["provider"].unique())
+    _pcolors = provider_colors(_providers)
+
+    fig, ax = plt.subplots(figsize=(6, 5))
+    for i, p in enumerate(_providers):
+        sub = df[df["provider"] == p]
+        jitter = np.random.default_rng(42).uniform(-0.15, 0.15, size=len(sub))
+        ax.scatter(
+            np.full(len(sub), i) + jitter,
+            sub["std_score"],
+            color=_pcolors[p], alpha=0.7, s=40, edgecolors="white", linewidth=0.5,
+        )
+        # Mean line
+        mean_std = sub["std_score"].mean()
+        ax.hlines(mean_std, i - 0.3, i + 0.3, color=_pcolors[p], linewidth=2, linestyle="--")
+
+    ax.set_xticks(range(len(_providers)))
+    ax.set_xticklabels([provider_label(p) for p in _providers], fontsize=11)
+    ax.set_ylabel("Faithfulness Std (across 3 samples)")
+    ax.set_title("Generation Consistency per Prompt", fontsize=13, fontweight="bold")
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    return fig
+
+
+def plot_check_failure_rates(f: pd.DataFrame) -> plt.Figure:
+    """Horizontal grouped bars: check_type on y, failure rate on x, per model."""
+    expanded = expand_check_verdicts(f)
+    taxonomy = error_taxonomy(expanded)
+
+    check_types = sorted(taxonomy["check_type"].unique())
+    _providers = sorted(taxonomy["provider"].unique())
+    _pcolors = provider_colors(_providers)
+
+    y = np.arange(len(check_types))
+    h = 0.8 / max(len(_providers), 1)
+    fig, ax = plt.subplots(figsize=(9, max(5, len(check_types) * 0.8)))
+
+    for i, p in enumerate(_providers):
+        offset = (i - (len(_providers) - 1) / 2) * h
+        rates = []
+        for ct in check_types:
+            match = taxonomy[(taxonomy["check_type"] == ct) & (taxonomy["provider"] == p)]
+            rates.append(match.iloc[0]["failure_pct"] if len(match) > 0 else 0)
+        ax.barh(y + offset, rates, h, label=provider_label(p), color=_pcolors[p], alpha=0.9)
+
+    ax.set_yticks(y)
+    ax.set_yticklabels(check_types, fontsize=10)
+    ax.set_xlabel("Failure Rate (%)")
+    ax.set_title("Failure Rate by Requirement Type", fontsize=13, fontweight="bold")
+    ax.legend(fontsize=10)
+    ax.spines[["top", "right"]].set_visible(False)
+    fig.tight_layout()
+    return fig
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -296,6 +498,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--annotator", default="", help="Filter human rankings to this annotator only")
     parser.add_argument("--plots-dir", default="", help="Override output directory for plots")
+    parser.add_argument("--extended", action="store_true", help="Generate extended analysis plots")
     args = parser.parse_args()
 
     global PLOTS_DIR
@@ -318,6 +521,14 @@ def main() -> None:
     save(plot_human_by_category(h),   "human_by_category.png")
     save(plot_faithfulness_by_cat(f), "faithfulness_by_cat.png")
     save(plot_summary(h, f),          "summary.png")
+
+    if args.extended:
+        print("Generating extended plots...")
+        save(plot_error_heatmap(f),        "error_heatmap.png")
+        save(plot_radar_by_category(h),    "model_radar.png")
+        save(plot_quality_dimensions(q),   "quality_dimensions.png")
+        save(plot_consistency_strip(f),    "consistency_strip.png")
+        save(plot_check_failure_rates(f),  "check_failure_rates.png")
 
     print("Done. All plots saved to results/plots/")
 

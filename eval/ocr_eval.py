@@ -12,7 +12,6 @@ from typing import Dict, Any, List, Tuple
 
 import pandas as pd
 from PIL import Image
-import pytesseract
 from rapidfuzz import fuzz
 
 

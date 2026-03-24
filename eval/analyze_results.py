@@ -22,6 +22,12 @@ from pathlib import Path
 import pandas as pd
 
 from providers.registry import label as provider_label
+from eval.deep_analysis import (
+    compute_statistics,
+    error_taxonomy,
+    expand_check_verdicts,
+    sample_consistency,
+)
 
 RANKINGS_CSV = Path("results/human_rankings.csv")
 FAITH_CSV    = Path("results/faithfulness_scores.csv")
@@ -203,6 +209,8 @@ def agreement_analysis(
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--annotator", default="", help="Filter human rankings to this annotator only")
+    parser.add_argument("--extended", action="store_true",
+                        help="Run deep analysis: error taxonomy, consistency, statistics")
     args = parser.parse_args()
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -262,8 +270,7 @@ def main() -> None:
             f"Tie={int(row.get('tie', 0))} Neither={int(row.get('neither', 0))}{dec_str}"
         )
 
-    counts.to_csv(OUT_DIR / "human_win_rates.csv", index=False)
-    cat.to_csv(OUT_DIR / "human_win_rates_by_cat.csv", index=False)
+    # (human_win_rates CSVs removed — data is in benchmark_report.md)
 
     # -------------------------------------------------------------------
     # 2. VLM faithfulness
@@ -371,21 +378,95 @@ def main() -> None:
         lines.append("  No decisive votes found.")
 
     # -------------------------------------------------------------------
+    # 5. Extended deep analysis (--extended)
+    # -------------------------------------------------------------------
+    extra_files: list[str] = []
+    if args.extended:
+        print("\nRunning extended analysis...")
+
+        # Error taxonomy
+        expanded = expand_check_verdicts(f)
+        taxonomy = error_taxonomy(expanded)
+        taxonomy.to_csv(OUT_DIR / "error_taxonomy.csv", index=False)
+        extra_files.append("error_taxonomy.csv")
+
+        lines += [
+            "",
+            "=" * 60,
+            "ERROR TAXONOMY (failure rate by check type)",
+            "=" * 60,
+        ]
+        for _, row in taxonomy.iterrows():
+            lines.append(
+                f"  {row['provider']:10s} | {row['check_type']:16s}: "
+                f"{row['failure_pct']:.2f}%  (n={int(row['n_checks'])})"
+            )
+
+        # Cross-sample consistency
+        consistency = sample_consistency(f, h)
+        cons_df = consistency["faithfulness_consistency"]
+        cons_df.to_csv(OUT_DIR / "consistency_metrics.csv", index=False)
+        extra_files.append("consistency_metrics.csv")
+
+        lines += [
+            "",
+            "=" * 60,
+            "CROSS-SAMPLE CONSISTENCY",
+            "=" * 60,
+            f"  Mean faithfulness std: {consistency['overall_faith_std']:.4f}",
+        ]
+        if consistency["human_consistency"]:
+            hc = consistency["human_consistency"]
+            lines.append(
+                f"  Human agreement (all 3 samples same winner): "
+                f"{hc['agreement_rate']:.1f}% ({hc['n_agree']}/{hc['n_prompts']})"
+            )
+
+        # Statistical tests
+        stats = compute_statistics(f, q, h)
+        stat_rows = []
+        for r in stats.get("faithfulness_cis", []):
+            stat_rows.append(r)
+        for r in stats.get("faithfulness_cat_cis", []):
+            stat_rows.append(r)
+        import pandas as _pd
+        stats_df = _pd.DataFrame(stat_rows)
+        stats_df.to_csv(OUT_DIR / "statistical_tests.csv", index=False)
+        extra_files.append("statistical_tests.csv")
+
+        perm = stats.get("faithfulness_perm_overall")
+        if perm:
+            lines += [
+                "",
+                "=" * 60,
+                "STATISTICAL TESTS",
+                "=" * 60,
+                f"  Faithfulness overall diff: {perm['diff']:+.2f} pp, "
+                f"p = {perm['p_value']:.4f}",
+            ]
+            for r in stats.get("faithfulness_perm_cat", []):
+                sig = "*" if r["p_value"] < 0.05 else ""
+                lines.append(
+                    f"  {r['category']:12s}: diff {r['diff']:+.2f} pp, "
+                    f"p = {r['p_value']:.4f} {sig}"
+                )
+
+        # Generate benchmark report
+        from eval.benchmark_report import generate_report
+        report_md = generate_report(f, q, h)
+        md_path = OUT_DIR / "benchmark_report.md"
+        md_path.write_text(report_md, encoding="utf-8")
+        extra_files.append("benchmark_report.md")
+
+    # -------------------------------------------------------------------
     # Print + save report
     # -------------------------------------------------------------------
     report = "\n".join(lines)
     print("\n" + report)
 
-    report_path = OUT_DIR / "analysis_report.txt"
-    report_path.write_text(report, encoding="utf-8")
-
+    written = ["combined_head_to_head.csv"] + extra_files
     print("\nWrote:")
-    for name in (
-        "human_win_rates.csv",
-        "human_win_rates_by_cat.csv",
-        "combined_head_to_head.csv",
-        "analysis_report.txt",
-    ):
+    for name in written:
         print(f"  results/{name}")
 
 
