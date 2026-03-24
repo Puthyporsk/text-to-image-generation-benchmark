@@ -17,7 +17,7 @@ import base64
 @dataclass
 class GeminiImagenProvider:
     name: str = "gemini"
-    model: str = "imagen-4.0-generate-001"  # change later if you choose another Imagen model
+    model: str = "imagen-4.0-generate-001"
 
     def __post_init__(self):
         load_dotenv()

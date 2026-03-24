@@ -7,7 +7,7 @@ from typing import Dict, Any, List
 
 import torch
 from PIL import Image
-from transformers import AutoProcessor
+from transformers import AutoProcessor, BitsAndBytesConfig
 from transformers import Qwen2VLForConditionalGeneration
 from qwen_vl_utils import process_vision_info
 
@@ -211,13 +211,17 @@ def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"[ENV] torch.cuda.is_available() = {torch.cuda.is_available()}")
 
+    bnb_config = BitsAndBytesConfig(load_in_4bit=True) if device == "cuda" else None
     processor = AutoProcessor.from_pretrained(JUDGE_MODEL)
     model = Qwen2VLForConditionalGeneration.from_pretrained(
         JUDGE_MODEL,
         torch_dtype=torch.float16 if device == "cuda" else torch.float32,
+        quantization_config=bnb_config,
         device_map="auto",
     )
     model.eval()
+    if device == "cuda":
+        print(f"[ENV]  VRAM after load: {torch.cuda.memory_allocated() / 1024**3:.2f} GB")
 
     image_dirs = {
         "gemini": run_paths["images_gemini"],
