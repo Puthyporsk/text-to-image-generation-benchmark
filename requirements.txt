@@ -2,10 +2,8 @@
 python-dotenv
 pillow
 pandas
+numpy
 tqdm
-rapidfuzz
-tesseract
-dotenv
 
 # google imagen / gemini
 google-genai
@@ -15,18 +13,24 @@ openai
 
 # ocr
 pytesseract
-opencv-python
+rapidfuzz
 
 # vlm judge
 torch
 transformers
 accelerate
 qwen-vl-utils
+bitsandbytes
+scipy
 
-# human ui
-streamlit==1.29.0
-altair==4.2.2
-gspread
-cloudinary
+# plotting
 matplotlib
 seaborn
+
+# human ui
+streamlit
+altair
+
+# optional (Google Sheets sync, Cloudinary image hosting)
+# gspread
+# cloudinary
