@@ -469,7 +469,7 @@ with col_l:
     st.subheader(left_label)
     left_path = find_image(run_dir, left_model, pid, sample_k)
     if left_path:
-        st.image(str(left_path), use_column_width=True)
+        st.image(str(left_path), use_container_width=True)
         sl = score_label(faith_df, left_model, pid, sample_k)
         ql = quality_label(quality_df, left_model, pid, sample_k)
         if sl:
@@ -483,7 +483,7 @@ with col_r:
     st.subheader(right_label)
     right_path = find_image(run_dir, right_model, pid, sample_k)
     if right_path:
-        st.image(str(right_path), use_column_width=True)
+        st.image(str(right_path), use_container_width=True)
         sl = score_label(faith_df, right_model, pid, sample_k)
         ql = quality_label(quality_df, right_model, pid, sample_k)
         if sl:
@@ -626,4 +626,4 @@ if any(p.exists() for _, p in PLOT_FILES):
     for i, (title, path) in enumerate(PLOT_FILES):
         with (col1 if i % 2 == 0 else col2):
             if path.exists():
-                st.image(str(path), caption=title, use_column_width=True)
+                st.image(str(path), caption=title, use_container_width=True)

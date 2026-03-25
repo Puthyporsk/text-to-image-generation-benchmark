@@ -32,5 +32,5 @@ streamlit==1.44.1
 altair<6
 
 # optional (Google Sheets sync, Cloudinary image hosting)
-# gspread
+gspread
 # cloudinary
