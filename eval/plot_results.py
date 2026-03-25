@@ -200,7 +200,7 @@ def plot_faithfulness_by_cat(f: pd.DataFrame) -> plt.Figure:
     ax.set_xticklabels([CAT_LABELS[c] for c in cats], fontsize=11)
     ax.set_ylabel("Mean faithfulness score (%)")
     ax.set_ylim(75, 105)
-    ax.set_title("VLM Faithfulness Scores by Category\n(Qwen2-VL-2B judge, avg over 3 samples)",
+    ax.set_title("VLM Faithfulness Scores by Category\n(Qwen2-VL-7B judge, avg over 3 samples)",
                  fontsize=13, fontweight="bold")
     ax.legend(fontsize=10)
     ax.spines[["top", "right"]].set_visible(False)
