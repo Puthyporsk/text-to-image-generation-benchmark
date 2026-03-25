@@ -1,4 +1,17 @@
-# eval/ocr_eval.py
+"""
+eval/ocr_eval.py
+----------------
+OCR-based evaluation for typography prompts.
+
+Extracts text from generated images using Tesseract OCR, then computes
+fuzzy string matching scores (via rapidfuzz) against ground-truth targets
+defined in eval_targets.text[] of each prompt. A target is 'found' if its
+partial_ratio score exceeds the threshold (default 85).
+
+Usage:
+    python -m eval.ocr_eval --run_dir runs/2026-02-12_core40_k3_1024 \\
+                            --prompts prompts/core40.jsonl
+"""
 from __future__ import annotations
 
 import pytesseract

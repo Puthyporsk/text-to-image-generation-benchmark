@@ -1,7 +1,7 @@
 """
 eval/judge_faithfulness.py
 --------------------------
-VLM-based faithfulness judge using Qwen2-VL-2B-Instruct.
+VLM-based faithfulness judge using Qwen2-VL-7B-Instruct.
 
 For every image in runs/<run>/images/{gemini,chatgpt}/ it:
   - matches the filename to a prompt in prompts/core40.jsonl

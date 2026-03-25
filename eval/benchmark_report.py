@@ -22,7 +22,6 @@ from eval.deep_analysis import (
     compute_statistics,
     error_taxonomy,
     expand_check_verdicts,
-    failure_rate_by_check,
     sample_consistency,
     signal_disagreement,
     worst_failures,

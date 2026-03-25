@@ -1,7 +1,7 @@
 """
 eval/judge_quality.py
 ---------------------
-Rubric-style aesthetic / technical quality judge using Qwen2-VL-2B-Instruct.
+Rubric-style aesthetic / technical quality judge using Qwen2-VL-7B-Instruct.
 
 Scores five dimensions for each image (1 = very poor → 5 = excellent):
   subject_clarity  — main subject clearly rendered and identifiable

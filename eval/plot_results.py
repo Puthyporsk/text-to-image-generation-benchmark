@@ -12,9 +12,16 @@ Outputs (saved to results/plots/):
   faithfulness_by_cat.png  -- VLM faithfulness scores per category
   summary.png              -- 4-panel combined figure
 
+With --extended flag, also outputs:
+  error_heatmap.png        -- per-prompt faithfulness heatmap
+  model_radar.png          -- radar chart of win rates by category
+  quality_dimensions.png   -- grouped bars with CI error bars
+  consistency_strip.png    -- strip plot of per-prompt std
+  check_failure_rates.png  -- horizontal grouped bars by check type
+
 Usage:
     python -m eval.plot_results
-    python -m eval.plot_results --annotator "Alice"
+    python -m eval.plot_results --extended
 """
 from __future__ import annotations
 

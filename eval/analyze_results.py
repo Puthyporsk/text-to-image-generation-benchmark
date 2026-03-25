@@ -5,14 +5,17 @@ Merges human rankings, VLM faithfulness, and quality scores into a
 unified analysis report.
 
 Outputs:
-  results/human_win_rates.csv          -- human vote totals (overall)
-  results/human_win_rates_by_cat.csv   -- human votes broken down by category
   results/combined_head_to_head.csv    -- per-prompt merged view of all signals
-  results/analysis_report.txt          -- plain-text summary
+
+With --extended flag, also outputs:
+  results/error_taxonomy.csv           -- failure rates by check type
+  results/consistency_metrics.csv      -- cross-sample consistency
+  results/statistical_tests.csv        -- bootstrap CIs and permutation tests
+  results/benchmark_report.md          -- unified Markdown report
 
 Usage:
     python -m eval.analyze_results
-    python -m eval.analyze_results --annotator "Alice"
+    python -m eval.analyze_results --extended
 """
 from __future__ import annotations
 

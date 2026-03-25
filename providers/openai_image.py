@@ -1,3 +1,11 @@
+"""
+providers/openai_image.py
+-------------------------
+Image generation provider for OpenAI's GPT Image 1 Mini API.
+
+Uses the openai SDK with model gpt-image-1-mini. Returns base64-encoded
+images. Reads OPENAI_API_KEY from .env. Configurable quality: low/medium/high.
+"""
 from __future__ import annotations
 
 import base64

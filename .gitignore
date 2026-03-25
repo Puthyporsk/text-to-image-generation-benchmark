@@ -53,3 +53,4 @@ tmp/
 temp/
 cmpt722-llms-image-benchmark-af3c18068f7c.json
 /scripts/upload_to_cloudinary.py
+/report

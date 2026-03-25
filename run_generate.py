@@ -1,3 +1,15 @@
+"""
+run_generate.py
+---------------
+CLI entry point for generating benchmark images.
+
+For each prompt in the given JSONL file, generates k samples per model
+and saves them to runs/<run_dir>/images/<provider>/<prompt_id>__s<sample>.png.
+
+Usage:
+    python run_generate.py --run_dir runs/2026-02-12_core40_k3_1024 \\
+                           --provider gemini --prompts prompts/core40.jsonl
+"""
 from __future__ import annotations
 import json
 from pathlib import Path

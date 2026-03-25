@@ -1,3 +1,11 @@
+"""
+providers/gemini_imagen.py
+--------------------------
+Image generation provider for Google's Gemini Imagen 4 API.
+
+Uses the google-genai SDK with model imagen-4.0-generate-001.
+Reads GEMINI_API_KEY from .env. Outputs 1024x1024 images at 1:1 aspect ratio.
+"""
 from __future__ import annotations
 import os
 from dataclasses import dataclass

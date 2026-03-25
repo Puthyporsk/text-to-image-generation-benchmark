@@ -50,25 +50,6 @@ def expand_check_verdicts(faith_df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def failure_rate_by_check(expanded_df: pd.DataFrame) -> pd.DataFrame:
-    """Per-check failure rate grouped by (provider, prompt_id, check_text).
-
-    A check is considered failed if verdict is NO or UNCLEAR.
-    """
-    df = expanded_df.copy()
-    df["failed"] = df["verdict"].isin(["NO", "UNCLEAR"]).astype(int)
-    grouped = (
-        df.groupby(["provider", "prompt_id", "category", "check_text"])
-        .agg(
-            n_samples=("failed", "count"),
-            n_failed=("failed", "sum"),
-        )
-        .reset_index()
-    )
-    grouped["failure_rate"] = (grouped["n_failed"] / grouped["n_samples"]).round(3)
-    return grouped.sort_values("failure_rate", ascending=False)
-
-
 # -- Check-type classifier --------------------------------------------------
 
 _COUNT_RE    = re.compile(r"exactly\s+\d+|(?:^|\s)\d+\s+\w+", re.IGNORECASE)
