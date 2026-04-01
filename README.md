@@ -107,4 +107,4 @@ python -m eval.plot_results --extended
 - **Neither model dominates overall.** Gemini leads in human preference 53.5% vs 46.5%, but confidence intervals overlap.
 - **Complementary strengths:** ChatGPT dominates spatial reasoning (92% win rate); Gemini dominates typography (72%).
 - **Text rendering is the hardest capability**, accounting for >90% of all detected check failures.
-- **Automated faithfulness scores predict human preference only 2.9% of the time**, confirming that prompt compliance and perceptual quality are largely orthogonal.
+- **Automated faithfulness scores predict human preference only 2.9% of the time**, confirming that prompt compliance and perceptual quality are orthogonal.

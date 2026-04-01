@@ -32,7 +32,7 @@ env/
 *.pem
 openai-api-key.txt
 .streamlit/secrets.toml
-scripts/gen_secrets.py
+scripts
 
 # ===== Editor / IDE =====
 .vscode/
@@ -52,5 +52,5 @@ downloads/
 tmp/
 temp/
 cmpt722-llms-image-benchmark-af3c18068f7c.json
-/scripts/upload_to_cloudinary.py
+/scripts
 /report

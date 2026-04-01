@@ -30,7 +30,6 @@ class GeminiImagenProvider:
     def __post_init__(self):
         load_dotenv()
         # Per Google docs, genai.Client() will use GEMINI_API_KEY from env
-        # (or you can pass api_key explicitly if you prefer).
         self.client = genai.Client()
 
     def generate_one(
